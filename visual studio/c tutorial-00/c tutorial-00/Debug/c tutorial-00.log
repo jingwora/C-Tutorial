@@ -1,0 +1,3 @@
+﻿  variable.c
+D:\Repos\C-Tutorial\visual studio\c tutorial-00\c tutorial-00\variable.c(12,1): warning C4305: 'initializing': truncation from 'double' to 'float'
+  c tutorial-00.vcxproj -> D:\Repos\C-Tutorial\visual studio\c tutorial-00\Debug\c tutorial-00.exe

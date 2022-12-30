@@ -113,15 +113,21 @@ VSCODE Setting
 
 ## Keywords
 
-| Keywords | Description       | Example                     |
-| -------- | ----------------- | --------------------------- |
-| int      | function          | int main(void){return 0;}   |
-| int      | integer variable  | int integerValue = 3;       |
-| float    | decimal variable  | float decimalValue = 3.0f;  |
-| double   | decimal readonly  | double decimalValue = 3.0f; |
-| char     | string variable   | char word[] = "string";     |
-| \_Bool   | variable readonly | \_Bool falseIsDetected = 0; |
-| const    | readonly variable | const float pi = 3.14f;     |
+| Keywords | Description        | Example                                      |
+| -------- | ------------------ | -------------------------------------------- |
+| int      | function           | int main(void){return 0;}                    |
+| int      | integer variable   | int integerValue = 3;                        |
+| float    | decimal variable   | float decimalValue = 3.0f;                   |
+| double   | decimal readonly   | double decimalValue = 3.0f;                  |
+| char     | string variable    | char word[] = "string";                      |
+| \_Bool   | variable readonly  | \_Bool falseIsDetected = 0;                  |
+| const    | readonly variable  | const float pi = 3.14f;                      |
+| printf   | print value        | printf("Hello, world!");                     |
+| printf   | print integer      | printf("Integer: %d\n", integer);            |
+| printf   | print float value  | printf("Float value: %f\n", float_value);    |
+| printf   | print double value | printf("Double value: %lf\n", double_value); |
+| printf   | print character    | printf("Character: %c\n", character);        |
+| printf   | print string       | printf("String: %s\n", string);              |
 
 ### Arithmetic operations
 

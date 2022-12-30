@@ -11,6 +11,8 @@ int condition1()
 	{
 		printf("1:yes");
 	}
+
+	return 0;
 }
 
 
@@ -26,6 +28,8 @@ int condition2()
 	{
 		printf("2:no");
 	}
+
+	return 0;
 }
 
 
@@ -41,6 +45,8 @@ int condition3()
 	{
 		printf("3:no");
 	}
+
+	return 0;
 }
 
 
@@ -58,8 +64,9 @@ int condition4()
 	{
 		printf("4:true");
 	}
-}
 
+	return 0;
+}
 
 
 int main()

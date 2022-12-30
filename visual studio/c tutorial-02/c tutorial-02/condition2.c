@@ -18,6 +18,8 @@ int condition1()
 	else {
 		printf("1:Value 2 is bigger!");
 	}
+
+	return 0;
 }
 
 
@@ -36,6 +38,8 @@ int condition2()
 	{
 		printf("2:no");
 	}
+
+	return 0;
 }
 
 
@@ -53,9 +57,34 @@ int condition3()
 	{
 		printf("3:no");
 	}
+
+	return 0;
 }
+
+
+// condition4
+// switch
+int condition4()
+{
+	char character = 'Y';
+	switch (character) 
+	{
+	case 'N': 
+		printf("4:no");
+		break;
+	case 'Y': 
+		printf("4:yes");
+		break;
+	default: 
+		printf("4:not know"); 
+		break;
+	}
+
+	return 0;
+}
+
 
 int main()
 {
-	condition3();
+	condition4();
 }
