@@ -79,3 +79,40 @@ VSCODE Setting
 
 - // oneline comment
 - /\* \*/ multiline comment
+- ; semi colon is used to signify the end of a line.
+
+## Variables and Types
+
+- Each variable must have a defined type
+- It’s good practise to make meaningful name
+- Cannot be a single digit
+- Cannot contain special characters (!”£$%^&\*) etc.
+- Global variable: variable definition outside the main function
+
+### Integer
+
+- Integer: To store real numbers
+
+### String
+
+- String: To store a series of characters,
+- "\n" is a special character that stands for a newline.
+
+### Booleans
+
+- Booleans: true (1) or false (0)
+
+### Float/Double
+
+- Float/Double: decimal values
+- Floating point precision: Floats allows for a higher level of accuracy of a value
+
+### Void
+
+- Void: special and is used to specify no value is available.
+
+## keywords
+
+| Keywords | Description       | Example                 |
+| -------- | ----------------- | ----------------------- |
+| const    | variable readonly | const float pi = 3.14f; |
