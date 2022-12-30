@@ -87,15 +87,15 @@ VSCODE Setting
 - It’s good practise to make meaningful name
 - Cannot be a single digit
 - Cannot contain special characters (!”£$%^&\*) etc.
-- Global variable: variable definition outside the main function
+- Global variable: variable definition outside the main function (can be accessed anywhere)
 
 ### Integer
 
-- Integer: To store real numbers
+- Integer: real numbers
 
 ### String
 
-- String: To store a series of characters,
+- String: a array of characters
 - "\n" is a special character that stands for a newline.
 
 ### Booleans
@@ -109,10 +109,19 @@ VSCODE Setting
 
 ### Void
 
-- Void: special and is used to specify no value is available.
+- Void: no value / not type
 
-## keywords
+## Keywords
 
 | Keywords | Description       | Example                 |
 | -------- | ----------------- | ----------------------- |
 | const    | variable readonly | const float pi = 3.14f; |
+
+### Arithmetic operations
+
+| Symbol | Description | Example               |
+| ------ | ----------- | --------------------- |
+| +      | plus        | int result = 1 + 2;   |
+| -      | minus       | int result = 1 - 2;   |
+| /      | devide      | float result = 1 / 2; |
+| \*     | multiply    | int result = 1 \* 2;  |
