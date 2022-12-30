@@ -139,6 +139,7 @@ VSCODE Setting
 - Declare Multiple Variables
 - int x = 1, y = 2, z = 3;
 - Manual conversion: int to float float sum = (float) 5 / 2;
+- In C you cannot get the length directly
 
 Format Specifier
 
