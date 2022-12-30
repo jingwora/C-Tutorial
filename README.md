@@ -96,7 +96,10 @@ VSCODE Setting
 ### String
 
 - String: a array of characters
-- "\n" is a special character that stands for a newline.
+- \n : special character for a newline
+- \t : special character for a tab
+- \\ : backslash
+- \" : double quote
 
 ### Booleans
 
