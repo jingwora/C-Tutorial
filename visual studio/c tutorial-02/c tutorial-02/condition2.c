@@ -89,13 +89,24 @@ int condition4()
 	return 0;
 }
 
+// condition5
+// ternary operator
+int condition5()
+{
+	int value = 20;
+	(value < 18) ? printf("yes") : printf("no");
+
+	return 0;
+}
+
 
 int main()
 {
-	condition1();
+	//condition1();
 	//condition2();
 	//condition3();
 	//condition4();
-	
+	condition5();
+
     return 0;
 }
