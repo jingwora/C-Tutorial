@@ -1,19 +1,35 @@
 /*
 C-Tutorail in visual studio
-Iteration
-for
+function
+void
 */
 
 #include <stdio.h>
 
 
-// iteration1
-// for loop
-int function1()
+// function1
+// void
+void function1()
+{
+	printf("function1");
+
+	return 0;
+}
+
+
+// function2
+// add
+void function2(int num1, int num2)
+{
+	int result = num1 + num2;
+	printf("Result is %d", result);
+}
 
 
 
 int main()
 {
-	function1();
+	function2(10, 4);
+	
+	return 0;
 }

@@ -115,7 +115,7 @@ VSCODE Setting
 
 | Functions | Description        | Example                                      |
 | --------- | ------------------ | -------------------------------------------- |
-| int       | function           | int main(void){return 0;}                    |
+| int       | main               | int main(void){return 0;}                    |
 | int       | integer variable   | int integerValue = 3;                        |
 | float     | decimal variable   | float decimalValue = 3.0f;                   |
 | double    | decimal readonly   | double decimalValue = 3.0f;                  |
@@ -166,3 +166,17 @@ VSCODE Setting
 | for() {}      | for loop      | int i = 1; for(int i = 0; i < 10; i++) {printf(“Looped!”);} |
 | while() {}    | while loop    | int i = 1; while (i <= 10) {printf("Looped!"); i++;}        |
 | do {} while() | do while loop | int i = 1; do {printf("Looped!"); i++;} while (i <= 10)     |
+
+### Functions
+
+- A method has two elements, parameters:(passed values) and the return type (returned values).
+- Void is used when you are not required to return.
+- Void main() cannot use exit() method so it is good practice to use int main() over the void main().
+- There are two types of parameter passing, by reference and by value.
+- Reference: any changes to parameter effects that passed variable. (Need pointers)
+- Value: any changes to parameter do not effect that passed variable.
+
+| Functions | Description             | Example                                  |
+| --------- | ----------------------- | ---------------------------------------- |
+| void() {} | function without return | void function() {printf("F"); }          |
+| int() {}  | function with return    | int function() {printf("F"); return 0; } |

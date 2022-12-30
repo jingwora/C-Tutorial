@@ -92,5 +92,10 @@ int condition4()
 
 int main()
 {
-	condition4();
+	condition1();
+	//condition2();
+	//condition3();
+	//condition4();
+	
+    return 0;
 }

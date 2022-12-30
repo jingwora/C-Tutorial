@@ -43,4 +43,7 @@ int variable2()
 int main()
 {
 	variable1();
+	//variable2();	
+
+    return 0;
 }

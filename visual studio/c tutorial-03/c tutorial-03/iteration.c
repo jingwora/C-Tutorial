@@ -156,5 +156,14 @@ int iteration8()
 
 int main()
 {
-	iteration8();
+	iteration1();
+	//iteration2();
+	//iteration3();
+	//iteration4();
+	//iteration5();
+	//iteration6();
+	//iteration7();
+	//iteration8();
+	
+    return 0;
 }
