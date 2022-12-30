@@ -185,3 +185,9 @@ VSCODE Setting
 
 - First index has an identifying value of 0
 - To access index[0]
+
+## Library
+
+\#include <stdio.h>
+
+- Input and output functions, such as printf()
