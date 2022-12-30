@@ -1,3 +1,9 @@
+/* 
+C-Tutorail in visual studio
+Condition2
+[if, else if, else], [switch, case, default, break]
+*/
+
 #include <stdio.h> 
 
 // condition1

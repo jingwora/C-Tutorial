@@ -111,23 +111,24 @@ VSCODE Setting
 
 - Void: no value / not type
 
-## Keywords
+### Functions
 
-| Keywords | Description        | Example                                      |
-| -------- | ------------------ | -------------------------------------------- |
-| int      | function           | int main(void){return 0;}                    |
-| int      | integer variable   | int integerValue = 3;                        |
-| float    | decimal variable   | float decimalValue = 3.0f;                   |
-| double   | decimal readonly   | double decimalValue = 3.0f;                  |
-| char     | string variable    | char word[] = "string";                      |
-| \_Bool   | variable readonly  | \_Bool falseIsDetected = 0;                  |
-| const    | readonly variable  | const float pi = 3.14f;                      |
-| printf   | print value        | printf("Hello, world!");                     |
-| printf   | print integer      | printf("Integer: %d\n", integer);            |
-| printf   | print float value  | printf("Float value: %f\n", float_value);    |
-| printf   | print double value | printf("Double value: %lf\n", double_value); |
-| printf   | print character    | printf("Character: %c\n", character);        |
-| printf   | print string       | printf("String: %s\n", string);              |
+| Functions | Description        | Example                                      |
+| --------- | ------------------ | -------------------------------------------- |
+| int       | function           | int main(void){return 0;}                    |
+| int       | integer variable   | int integerValue = 3;                        |
+| float     | decimal variable   | float decimalValue = 3.0f;                   |
+| double    | decimal readonly   | double decimalValue = 3.0f;                  |
+| char      | string variable    | char word[] = "string";                      |
+| \_Bool    | variable readonly  | \_Bool falseIsDetected = 0;                  |
+| const     | readonly variable  | const float pi = 3.14f;                      |
+| printf()  | print value        | printf("Hello, world!");                     |
+| printf()  | print integer      | printf("Integer: %d\n", integer);            |
+| printf()  | print float value  | printf("Float value: %f\n", float_value);    |
+| printf()  | print double value | printf("Double value: %lf\n", double_value); |
+| printf()  | print character    | printf("Character: %c\n", character);        |
+| printf()  | print string       | printf("String: %s\n", string);              |
+| scanf_s() | input              | int num; scanf_s("%d", &num);                |
 
 ### Arithmetic operations
 
@@ -141,7 +142,7 @@ VSCODE Setting
 
 ### Conditionals
 
-| Symbol             | Description              | Example                                                      |
+| Functions          | Description              | Example                                                      |
 | ------------------ | ------------------------ | ------------------------------------------------------------ |
 | >                  | greater than             | if (value > 5)                                               |
 | >=                 | greater than or equal to | if (value >= 5)                                              |
@@ -155,3 +156,9 @@ VSCODE Setting
 | if() {} else {}    | if else condition        | if (value > 5) {printf("yes");} else {printf("no");}         |
 | if() {} else if {} | if else if condition     | if (v > 5) {printf("yes");} else if (v <= 5) {printf("no");} |
 | switch()           | switch-case              | if (v > 5) {printf("yes");} else if (v <= 5) {printf("no");} |
+
+### Iteration
+
+| Functions | Description | Example                                          |
+| --------- | ----------- | ------------------------------------------------ |
+| for() {}  | For loop    | for(int x = 0; x > 10; x++) {printf(“Looped!”);} |

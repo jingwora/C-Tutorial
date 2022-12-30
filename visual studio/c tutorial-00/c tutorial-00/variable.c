@@ -1,6 +1,8 @@
-// C-Tutorail in visual studio
-// Variables
-// printf, scanf_s
+/*
+C-Tutorail in visual studio
+Variables
+printf, scanf_s
+*/
 
 #include <stdio.h>
 
