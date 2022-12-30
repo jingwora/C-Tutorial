@@ -121,20 +121,21 @@ VSCODE Setting
 
 ### Variables
 
-| Functions | Description            | Example                           |
-| --------- | ---------------------- | --------------------------------- |
-| int       | main                   | int main(void){return 0;}         |
-| int       | integer variable       | int integerValue = 3;             |
-| float     | decimal variable       | float decimalValue = 3.0f;        |
-| double    | decimal readonly       | double decimalValue = 3.0f;       |
-| char      | string variable        | char word[] = "string";           |
-| \_Bool    | variable readonly      | \_Bool falseIsDetected = 0;       |
-| bool      | boolean variable (C99) | bool boolValue = true;            |
-| const     | readonly variable      | const float PI = 3.14f;           |
-| printf()  | print value            | printf("Hello, world!");          |
-| printf()  | print integer          | printf("Integer: %d\n", integer); |
-| scanf_s() | input                  | int num; scanf_s(" %d", &num);    |
-| sizeof()  | memory size            | sizeof(myInt)                     |
+| Functions | Description            | Example                                         |
+| --------- | ---------------------- | ----------------------------------------------- |
+| int       | main                   | int main(void){return 0;}                       |
+| int       | integer variable       | int integerValue = 3;                           |
+| float     | decimal variable       | float decimalValue = 3.0f;                      |
+| double    | decimal readonly       | double decimalValue = 3.0f;                     |
+| char      | string variable        | char word[] = "string";                         |
+| size_t    | unsigned integer value | size_t length = sizeof(ages) / sizeof(ages[0]); |
+| \_Bool    | variable readonly      | \_Bool falseIsDetected = 0;                     |
+| bool      | boolean variable (C99) | bool boolValue = true;                          |
+| const     | readonly variable      | const float PI = 3.14f;                         |
+| printf()  | print value            | printf("Hello, world!");                        |
+| printf()  | print integer          | printf("Integer: %d\n", integer);               |
+| scanf_s() | input                  | int num; scanf_s(" %d", &num);                  |
+| sizeof()  | memory size            | sizeof(myInt)                                   |
 
 - Declare Multiple Variables
 - int x = 1, y = 2, z = 3;
@@ -221,7 +222,14 @@ Format Specifier
 - First index has an identifying value of 0
 - To access index[0]
 
+| Functions          | Description | Example                                               |
+| ------------------ | ----------- | ----------------------------------------------------- |
+| int myArray[][2]   | 2d array    | int myArray[][2] = {{1, 2}, {3, 4}};                  |
+| int myArray[][][2] | 3d array    | int myArray[][][2] = {{{1,1},{1,1}}, {{1,1}, {1,1}}}; |
+
 ## Library
 
-\#include <stdio.h> : Input and output functions, such as printf()
-\#include <stdbool.h> : To use boolean variable
+| library               | Description                                  |
+| --------------------- | -------------------------------------------- |
+| \#include <stdio.h>   | Input and output functions, such as printf() |
+| \#include <stdbool.h> | To use boolean variable, such as bool        |

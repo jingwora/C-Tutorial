@@ -1,7 +1,7 @@
 /*
 C-Tutorail in visual studio
 function
-void
+void, int
 */
 
 #include <stdio.h>
