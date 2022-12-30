@@ -133,3 +133,14 @@ VSCODE Setting
 | %      | modulus     | float result = 1 % 2; |
 
 ### Conditionals
+
+| Symbol          | Description              | Example                                                 |
+| --------------- | ------------------------ | ------------------------------------------------------- |
+| >               | greater than             | if (value > 5)                                          |
+| >=              | greater than or equal to | if (value >= 5)                                         |
+| <               | less than                | if (value < 5)                                          |
+| <=              | less than or equal to    | if (value <= 5)                                         |
+| ==              | equal                    | if (value == 5)                                         |
+| !=              | not equal                | if (value != 5)                                         |
+| if() {}         | if condition             | if (value > 5) {printf("yes");}                         |
+| if() {} else {} | if else condition        | if (value > 5) {printf("yes");} \n else {printf("no");} |
