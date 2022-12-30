@@ -98,8 +98,8 @@ VSCODE Setting
 - String: a array of characters
 - \n : special character for a newline
 - \t : special character for a tab
-- \\ : backslash
-- \" : double quote
+- \\\\ : backslash
+- \\" : double quote
 
 ### Booleans
 
