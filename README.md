@@ -17,6 +17,16 @@ Collection of learning meterials
 3. C++
 4. Java
 5. C#
-   -it has largely
-   been superseded in that domain by higher-level languages, such as C++,
-   Objective-C, C#, and Java.
+
+-it has largely been superseded in that domain by higher-level languages, such as C++, Objective-C, C#, and Java.
+
+- C is very fast, compared to other programming languages, like Java and Python
+
+## C vs. C++
+
+- C++ was developed as an extension of C, and both languages have almost the same syntax.
+- The main difference between C and C++ is that C++ support classes and objects, while C does not.
+
+## IDE
+
+Popular IDE's include Code::Blocks, Eclipse, and Visual Studio.
