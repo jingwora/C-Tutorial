@@ -18,11 +18,11 @@ Collection of learning meterials
 4. Java
 5. C#
 
--it has largely been superseded in that domain by higher-level languages, such as C++, Objective-C, C#, and Java.
+- It has largely been superseded in that domain by higher-level languages, such as C++, Objective-C, C#, and Java.
 
 - C is very fast, compared to other programming languages, like Java and Python
 
-- e C language is platform independent.
+- C language is platform independent.
 
 ## C Versions
 
@@ -47,7 +47,31 @@ Popular IDE's include Code::Blocks, Eclipse, Visual Studio, and CodeLite.
 - Install Visual Studio IDE
 - Right click on the .c file and click “Properties”. Then expand the C/C++ menu, go to “Advanced”, loop for the “Compile As” section and select from the drop down menu “Compile as C Code (/TC)”
 
-- Running C online: https://www.codechef.com/ide
+### Code::Blocks
+
+- http://www.codeblocks.org/downloads/binaries
+- codeblocks-20.03mingw-setup.exe
+
+### Running C online
+
+- https://www.codechef.com/ide
+
+### Setup for VSCODE
+
+Code Setting
+
+- Setup Mingw
+- Install & Setup MSYS2
+- Setup MSYS2 MINGW64
+- Setup path
+- Setup cmd
+
+VSCODE Setting
+
+- Install C/C++ Extension
+- Install Code Runner Extension
+- File > Preference > Setting > Extension > Run code configuration > Check Run In Terminal
+- Terminal > Configure Default Build Task
 
 ## Building Blocks
 
