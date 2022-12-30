@@ -1,3 +1,2 @@
 ﻿  function.c
-D:\Repos\C-Tutorial\visual studio\c tutorial-04\c tutorial-04\function.c(16,10): warning C4098: 'function1': 'void' function returning a value
   c tutorial-04.vcxproj -> D:\Repos\C-Tutorial\visual studio\c tutorial-04\Debug\c tutorial-04.exe
