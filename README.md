@@ -115,6 +115,7 @@ VSCODE Setting
 
 | Keywords | Description       | Example                     |
 | -------- | ----------------- | --------------------------- |
+| int      | function          | int main(void){return 0;}   |
 | int      | integer variable  | int integerValue = 3;       |
 | float    | decimal variable  | float decimalValue = 3.0f;  |
 | double   | decimal readonly  | double decimalValue = 3.0f; |
@@ -134,13 +135,17 @@ VSCODE Setting
 
 ### Conditionals
 
-| Symbol          | Description              | Example                                                 |
-| --------------- | ------------------------ | ------------------------------------------------------- |
-| >               | greater than             | if (value > 5)                                          |
-| >=              | greater than or equal to | if (value >= 5)                                         |
-| <               | less than                | if (value < 5)                                          |
-| <=              | less than or equal to    | if (value <= 5)                                         |
-| ==              | equal                    | if (value == 5)                                         |
-| !=              | not equal                | if (value != 5)                                         |
-| if() {}         | if condition             | if (value > 5) {printf("yes");}                         |
-| if() {} else {} | if else condition        | if (value > 5) {printf("yes");} \n else {printf("no");} |
+| Symbol             | Description              | Example                                                      |
+| ------------------ | ------------------------ | ------------------------------------------------------------ |
+| >                  | greater than             | if (value > 5)                                               |
+| >=                 | greater than or equal to | if (value >= 5)                                              |
+| <                  | less than                | if (value < 5)                                               |
+| <=                 | less than or equal to    | if (value <= 5)                                              |
+| ==                 | equal                    | if (value == 5)                                              |
+| !=                 | not equal                | if (value != 5)                                              |
+| &&                 | and                      | if (value1 == 5 && value2 == 5)                              |
+| \|\|               | or                       | if (value1 == 5 \|\| value2 == 5)                            |
+| if() {}            | if condition             | if (value > 5) {printf("yes");}                              |
+| if() {} else {}    | if else condition        | if (value > 5) {printf("yes");} else {printf("no");}         |
+| if() {} else if {} | if else if condition     | if (v > 5) {printf("yes");} else if (v <= 5) {printf("no");} |
+| switch()           | switch-case              | if (v > 5) {printf("yes");} else if (v <= 5) {printf("no");} |

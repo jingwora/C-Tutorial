@@ -1,0 +1,5 @@
+﻿  condition2.c
+D:\Repos\C-Tutorial\visual studio\c tutorial-02\c tutorial-02\condition2.c(39): warning C4716: 'condition2': must return a value
+D:\Repos\C-Tutorial\visual studio\c tutorial-02\c tutorial-02\condition2.c(56): warning C4716: 'condition3': must return a value
+D:\Repos\C-Tutorial\visual studio\c tutorial-02\c tutorial-02\condition2.c(21): warning C4716: 'condition1': must return a value
+  c tutorial-02.vcxproj -> D:\Repos\C-Tutorial\visual studio\c tutorial-02\Debug\c tutorial-02.exe
