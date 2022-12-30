@@ -128,7 +128,7 @@ VSCODE Setting
 | printf()  | print double value | printf("Double value: %lf\n", double_value); |
 | printf()  | print character    | printf("Character: %c\n", character);        |
 | printf()  | print string       | printf("String: %s\n", string);              |
-| scanf_s() | input              | int num; scanf_s("%d", &num);                |
+| scanf_s() | input              | int num; scanf_s(" %d", &num);               |
 
 ### Arithmetic operations
 
@@ -156,9 +156,13 @@ VSCODE Setting
 | if() {} else {}    | if else condition        | if (value > 5) {printf("yes");} else {printf("no");}         |
 | if() {} else if {} | if else if condition     | if (v > 5) {printf("yes");} else if (v <= 5) {printf("no");} |
 | switch()           | switch-case              | if (v > 5) {printf("yes");} else if (v <= 5) {printf("no");} |
+| break              | stop loop                | break;                                                       |
+| continue           | continue loop            | continue;                                                    |
 
 ### Iteration
 
-| Functions | Description | Example                                          |
-| --------- | ----------- | ------------------------------------------------ |
-| for() {}  | For loop    | for(int x = 0; x > 10; x++) {printf(“Looped!”);} |
+| Functions     | Description   | Example                                                     |
+| ------------- | ------------- | ----------------------------------------------------------- |
+| for() {}      | for loop      | int i = 1; for(int i = 0; i < 10; i++) {printf(“Looped!”);} |
+| while() {}    | while loop    | int i = 1; while (i <= 10) {printf("Looped!"); i++;}        |
+| do {} while() | do while loop | int i = 1; do {printf("Looped!"); i++;} while (i <= 10)     |
