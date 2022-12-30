@@ -22,6 +22,17 @@ Collection of learning meterials
 
 - C is very fast, compared to other programming languages, like Java and Python
 
+- e C language is platform independent.
+
+## C Versions
+
+- K&R C : Original (1978)
+- ANSI C or C89: American National Standards Institute (ANSI)
+- ISO C90 or C90: International Organization for Standardization
+- C95, C99, C11: ANSI standard for the C programming language
+- C17: The most recent standard. C18 standard provided only clarifications to C11 and introduced no new language features.
+- C2x: Next standard
+
 ## C vs. C++
 
 - C++ was developed as an extension of C, and both languages have almost the same syntax.
@@ -29,4 +40,18 @@ Collection of learning meterials
 
 ## IDE
 
-Popular IDE's include Code::Blocks, Eclipse, and Visual Studio.
+Popular IDE's include Code::Blocks, Eclipse, Visual Studio, and CodeLite.
+
+### Visual Studio
+
+- Install Visual Studio IDE
+- Right click on the .c file and click “Properties”. Then expand the C/C++ menu, go to “Advanced”, loop for the “Compile As” section and select from the drop down menu “Compile as C Code (/TC)”
+
+- Running C online: https://www.codechef.com/ide
+
+## Building Blocks
+
+### Comments
+
+- // oneline comment
+- /\* \*/ multiline comment
