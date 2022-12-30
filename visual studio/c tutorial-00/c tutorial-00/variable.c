@@ -40,10 +40,24 @@ int variable2()
 }
 
 
+int variable3()
+{
+	int myInt;
+	float myFloat;
+	double myDouble;
+	char myChar;
+
+	printf("%lu\n", sizeof(myInt));
+	printf("%lu\n", sizeof(myFloat));
+	printf("%lu\n", sizeof(myDouble));
+	printf("%lu\n", sizeof(myChar));
+}
+
 int main()
 {
-	variable1();
+	//variable1();
 	//variable2();	
+	variable3();
 
     return 0;
 }

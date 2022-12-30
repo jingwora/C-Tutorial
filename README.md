@@ -77,21 +77,31 @@ VSCODE Setting
 
 ### Comments
 
-- // oneline comment
-- /\* \*/ multiline comment
+- // Single-line Comments
+- /\* \*/ Multi-line Comments
 - ; semi colon is used to signify the end of a line.
 
 ## Variables and Types
 
 - Each variable must have a defined type
-- It’s good practise to make meaningful name
-- Cannot be a single digit
-- Cannot contain special characters (!”£$%^&\*) etc.
 - Global variable: variable definition outside the main function (can be accessed anywhere)
 
-### Integer
+### Variable Name
 
-- Integer: real numbers
+- Letters, digits and underscores
+- Begin with a letter or an underscore (\_)
+- Case sensitive
+- Cannot contain special characters (!”£$%^&\*) etc.
+- Cannot be a single digit
+- Reserved words (such as int) cannot be used as names
+- It’s good practise to make meaningful name
+
+| Data Type | Size (bytes) | Description       |
+| --------- | ------------ | ----------------- |
+| integer   | 2 or 4       | real numbers      |
+| float     | 4            | 6 decimal digits  |
+| double    | 8            | 15 decimal digits |
+| character | 1            | real numbers      |
 
 ### String
 
@@ -105,43 +115,63 @@ VSCODE Setting
 
 - Booleans: true (1) or false (0)
 
-### Float/Double
-
-- Float/Double: decimal values
-- Floating point precision: Floats allows for a higher level of accuracy of a value
-
 ### Void
 
 - Void: no value / not type
 
-### Functions
+### Variables
 
-| Functions | Description        | Example                                      |
-| --------- | ------------------ | -------------------------------------------- |
-| int       | main               | int main(void){return 0;}                    |
-| int       | integer variable   | int integerValue = 3;                        |
-| float     | decimal variable   | float decimalValue = 3.0f;                   |
-| double    | decimal readonly   | double decimalValue = 3.0f;                  |
-| char      | string variable    | char word[] = "string";                      |
-| \_Bool    | variable readonly  | \_Bool falseIsDetected = 0;                  |
-| const     | readonly variable  | const float pi = 3.14f;                      |
-| printf()  | print value        | printf("Hello, world!");                     |
-| printf()  | print integer      | printf("Integer: %d\n", integer);            |
-| printf()  | print float value  | printf("Float value: %f\n", float_value);    |
-| printf()  | print double value | printf("Double value: %lf\n", double_value); |
-| printf()  | print character    | printf("Character: %c\n", character);        |
-| printf()  | print string       | printf("String: %s\n", string);              |
-| scanf_s() | input              | int num; scanf_s(" %d", &num);               |
+| Functions | Description            | Example                           |
+| --------- | ---------------------- | --------------------------------- |
+| int       | main                   | int main(void){return 0;}         |
+| int       | integer variable       | int integerValue = 3;             |
+| float     | decimal variable       | float decimalValue = 3.0f;        |
+| double    | decimal readonly       | double decimalValue = 3.0f;       |
+| char      | string variable        | char word[] = "string";           |
+| \_Bool    | variable readonly      | \_Bool falseIsDetected = 0;       |
+| bool      | boolean variable (C99) | bool boolValue = true;            |
+| const     | readonly variable      | const float PI = 3.14f;           |
+| printf()  | print value            | printf("Hello, world!");          |
+| printf()  | print integer          | printf("Integer: %d\n", integer); |
+| scanf_s() | input                  | int num; scanf_s(" %d", &num);    |
+| sizeof()  | memory size            | sizeof(myInt)                     |
+
+- Declare Multiple Variables
+- int x = 1, y = 2, z = 3;
+- Manual conversion: int to float float sum = (float) 5 / 2;
+
+Format Specifier
+
+- %d or %i : integer
+- %f : float
+- %lf : double
+- %c : character
+- %s : string
+- %lu : long unsigned int
 
 ### Arithmetic operations
 
-| Symbol | Description | Example               |
-| ------ | ----------- | --------------------- |
-| +      | plus        | int result = 1 + 2;   |
-| -      | minus       | int result = 1 - 2;   |
-| /      | devide      | float result = 1 / 2; |
-| \*     | multiply    | int result = 1 \* 2;  |
-| %      | modulus     | float result = 1 % 2; |
+| Symbol | Description    | Example               |
+| ------ | -------------- | --------------------- |
+| +      | plus           | int result = 1 + 2;   |
+| -      | minus          | int result = 1 - 2;   |
+| /      | devide         | float result = 1 / 2; |
+| \*     | multiply       | int result = 1 \* 2;  |
+| %      | modulus        | float result = 1 % 2; |
+| ++     | increment by 1 | i++                   |
+| --     | decrement by 1 | i--                   |
+| +=     | x = x + 3      | x += 3                |
+| -=     | x = x - 3      | x -= 3                |
+| /=     | x = x / 3      | x /= 3                |
+| %=     | x = x % 3      | x %= 3                |
+| &=     | x = x & 3      | x &= 3                |
+| \|=    | x = x \| 3     | x \|= 3               |
+| ^=     | x = x ^ 3      | x ^= 3                |
+| >>=    | x = x >> 3     | x >>= 3               |
+| <<=    | x = x << 3     | x <<= 3               |
+
+- i++ assign -> increment
+- ++i increment -> assign
 
 ### Conditionals
 
@@ -153,6 +183,7 @@ VSCODE Setting
 | <=                 | less than or equal to    | if (value <= 5)                                              |
 | ==                 | equal                    | if (value == 5)                                              |
 | !=                 | not equal                | if (value != 5)                                              |
+| !                  | not                      | !value                                                       |
 | &&                 | and                      | if (value1 == 5 && value2 == 5)                              |
 | \|\|               | or                       | if (value1 == 5 \|\| value2 == 5)                            |
 | if() {}            | if condition             | if (value > 5) {printf("yes");}                              |
@@ -191,6 +222,5 @@ VSCODE Setting
 
 ## Library
 
-\#include <stdio.h>
-
-- Input and output functions, such as printf()
+\#include <stdio.h> : Input and output functions, such as printf()
+\#include <stdbool.h> : To use boolean variable
