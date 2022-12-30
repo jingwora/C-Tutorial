@@ -113,9 +113,14 @@ VSCODE Setting
 
 ## Keywords
 
-| Keywords | Description       | Example                 |
-| -------- | ----------------- | ----------------------- |
-| const    | variable readonly | const float pi = 3.14f; |
+| Keywords | Description       | Example                     |
+| -------- | ----------------- | --------------------------- |
+| int      | integer variable  | int integerValue = 3;       |
+| float    | decimal variable  | float decimalValue = 3.0f;  |
+| double   | decimal readonly  | double decimalValue = 3.0f; |
+| char     | string variable   | char word[] = "string";     |
+| \_Bool   | variable readonly | \_Bool falseIsDetected = 0; |
+| const    | readonly variable | const float pi = 3.14f;     |
 
 ### Arithmetic operations
 
@@ -125,3 +130,6 @@ VSCODE Setting
 | -      | minus       | int result = 1 - 2;   |
 | /      | devide      | float result = 1 / 2; |
 | \*     | multiply    | int result = 1 \* 2;  |
+| %      | modulus     | float result = 1 % 2; |
+
+### Conditionals
