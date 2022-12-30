@@ -176,7 +176,12 @@ VSCODE Setting
 - Reference: any changes to parameter effects that passed variable. (Need pointers)
 - Value: any changes to parameter do not effect that passed variable.
 
-| Functions | Description             | Example                                  |
-| --------- | ----------------------- | ---------------------------------------- |
-| void() {} | function without return | void function() {printf("F"); }          |
-| int() {}  | function with return    | int function() {printf("F"); return 0; } |
+| Functions | Description             | Example                                    |
+| --------- | ----------------------- | ------------------------------------------ |
+| void() {} | function without return | void function(int value) {printf(value); } |
+| int() {}  | function with return    | int function(int value) return value\*2; } |
+
+### Arrays
+
+- First index has an identifying value of 0
+- To access index[0]
