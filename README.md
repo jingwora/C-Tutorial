@@ -334,6 +334,60 @@ int myFunction(int x, int y) {
 - gcc -I/usr/local/include main.c -o main
 - gcc -I/D/Repos/C-Tutorial/visual studio/01-condition1/01-condition1 01-condition1.c -o main
 
+### Structures
+
+- Custom storing of data
+- Allows storing of several types, even other structures.
+- Access structure : struct myStructure s1;
+- Assign values to members : s1.myNum = 13;
+- To access members of a structure : s1.myNum
+
+```
+	// Create structure
+	struct Student {
+		char firstName[15];
+		char lastName[15];
+		int age;
+	};
+
+	// Add person 1
+	struct Student p1;
+	strcpy(p1.firstName, "Kento");
+	strcpy(p1.lastName, "Yamazaki");
+	p1.age = 10;
+
+```
+
+### TypeDef
+
+- To customize the name of build in and user defined variables and structures.
+
+```
+typedef struct {
+	char brand[15];
+	char model[15];
+	int year;
+} Car;
+
+```
+
+### Enumeration
+
+- A group of constants (unchangeable values)
+
+```
+enum Level {
+  LOW,
+  MEDIUM,
+  HIGH
+};
+
+enum Level myVar;  // access the enum
+
+enum Level myVar = MEDIUM; // assigned value
+
+```
+
 ### Math function
 
 - #include <math.h>
