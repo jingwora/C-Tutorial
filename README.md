@@ -1,6 +1,6 @@
 # C-Tutorial
 
-Collection of learning meterials
+C programming language summary with sample codes.
 
 ## Overview
 
@@ -239,6 +239,46 @@ Format Specifier
 - \* : to create a pointer variable
 - printf("The address is: %p\n", &var);
 - function(int value1, int value2, int(\*opp)(int, int))
+
+### Storage Classifications
+
+1. Automatic variables
+
+- Automatically created and destroyed when a function is called
+- auto int value; Is the same as int value;
+
+2. Static variables
+
+- static is used when you want to keep the variable throughout program session.
+- static int count = 0;
+
+3. Register variables
+
+- stored in register memory is much much quicker to access
+- only space for a few variables.
+- register int value;
+
+4. External variables
+
+- global scope variable
+- You would include another file as reference by placing this at the top of your file: #include "FileName.c"
+- extern int x;
+
+### create external variable
+
+- create extern.c
+- int x = 42;
+
+- create extern.h
+- extern int x;
+
+- create main.c
+- #include "extern.h"
+- printf("x = %d\n", x);
+
+- To add a directory to the include path ?
+- gcc -I/usr/local/include main.c -o main
+- gcc -I/D/Repos/C-Tutorial/visual studio/01-condition1/01-condition1 01-condition1.c -o main
 
 ## Library
 

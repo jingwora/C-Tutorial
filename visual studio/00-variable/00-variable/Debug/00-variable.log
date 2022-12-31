@@ -1,4 +1,4 @@
-﻿  00-variable.c
-D:\Repos\C-Tutorial\visual studio\00-variable\00-variable\00-variable.c(14,1): warning C4305: 'initializing': truncation from 'double' to 'float'
-D:\Repos\C-Tutorial\visual studio\00-variable\00-variable\00-variable.c(68): warning C4716: 'function4': must return a value
+﻿  main.c
+D:\Repos\C-Tutorial\visual studio\00-variable\00-variable\main.c(14,1): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Repos\C-Tutorial\visual studio\00-variable\00-variable\main.c(68): warning C4716: 'function4': must return a value
   00-variable.vcxproj -> D:\Repos\C-Tutorial\visual studio\00-variable\Debug\00-variable.exe
