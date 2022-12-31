@@ -121,16 +121,20 @@ void function3()
 	// Declare a variable of the Data union type
 	union Data data;
 
-	// Set the integer field of the union
+	// Assign values
 	data.i = 10;
-	printf("Integer: %d\n", data.i);
-
-	// Set the float field of the union
 	data.f = 3.14;
-	printf("Float: %f\n", data.f);
-
-	// Set the string field of the union
 	strcpy_s(data.str, sizeof(data.str), "Hello");
-	printf("String: %s\n", data.str);
 
+	// Print
+	printf("Integer: %d\n", data.i);
+	printf("Float: %f\n", data.f);
+	printf("String: %s\n", data.str);
+	
+	// Change value
+	data.i = 20;
+
+	printf("Integer after changing: %d\n", data.i);
+	printf("Float after changing: %f\n", data.f);
+	printf("String after changing: %s\n", data.str);
 }

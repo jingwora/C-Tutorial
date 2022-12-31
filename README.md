@@ -353,8 +353,8 @@ struct Student {
 };
 
 // Student 1
-struct Student s1;                 // access structure
-strcpy(s1.name, "Kento Yamazaki"); // assign values to members
+struct Student s1;                 // Access structure
+strcpy(s1.name, "Kento Yamazaki"); // Assign values to members
 s1.class = 'A';
 s1.age = 20;
 
@@ -362,7 +362,7 @@ s1.age = 20;
 struct Student s2 = { "Takuya Kimura", 'B', 18 };
 
 // Print
-printf("Name: %s\n", s1.name);   // access members of a structure
+printf("Name: %s\n", s1.name);   // Access members of a structure
 
 ```
 
@@ -393,9 +393,9 @@ enum Level {
   HIGH
 };
 
-enum Level myVar;  // access the enum
+enum Level myVar;  // Access the enum
 
-enum Level myVar = MEDIUM; // assigned value
+enum Level myVar = MEDIUM; // Assigned value
 
 ```
 
@@ -403,7 +403,7 @@ enum Level myVar = MEDIUM; // assigned value
 
 - To store different data types in the same memory location
 - This size of the unions is as large as the largest variable (smaller than structure)
-- Drawback: changing one value effects every other variable,
+- Drawback: changing one value affects every other variable,
 
 ```
 // Define the union
@@ -413,12 +413,10 @@ union Data {
 	char str[20];
 };
 
-// Declare a variable of the Data union type
-union Data data;
+union Data data;  // Access the union
+data.i = 10;      // Assign values to members
 
-// Set the integer field of the union
-data.i = 10;
-printf("Integer: %d\n", data.i);
+printf("Integer: %d\n", data.i); // Access members of a union
 
 ```
 
