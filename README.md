@@ -314,19 +314,24 @@ int myFunction(int x, int y) {
 
 ### create external variable
 
-- create extern.c
-- int x = 42;
+extern.c
 
---
+```
+int x = 42;
+```
 
-- create extern.h
-- extern int x;
+extern.h
 
---
+```
+extern int x;
+```
 
-- create main.c
-- #include "extern.h"
-- printf("x = %d\n", x);
+main.c
+
+```
+#include "extern.h"
+printf("x = %d\n", x);
+```
 
 --
 
@@ -338,23 +343,26 @@ int myFunction(int x, int y) {
 
 - Custom storing of data
 - Allows storing of several types, even other structures.
-- Access structure : struct myStructure s1;
-- Assign values to members : s1.myNum = 13;
-- To access members of a structure : s1.myNum
 
 ```
-	// Create structure
-	struct Student {
-		char firstName[15];
-		char lastName[15];
-		int age;
-	};
+// Create structure
+struct Student {
+	char name[30]; // String
+	char class;    // Character
+	int age;       // Integer
+};
 
-	// Add person 1
-	struct Student p1;
-	strcpy(p1.firstName, "Kento");
-	strcpy(p1.lastName, "Yamazaki");
-	p1.age = 10;
+// Student 1
+struct Student s1;                 // access structure
+strcpy(s1.name, "Kento Yamazaki"); // assign values to members
+s1.class = 'A';
+s1.age = 20;
+
+// Student 2
+struct Student s2 = { "Takuya Kimura", 'B', 18 };
+
+// Print
+printf("Name: %s\n", s1.name);   // access members of a structure
 
 ```
 
