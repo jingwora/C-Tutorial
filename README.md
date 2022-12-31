@@ -242,6 +242,25 @@ Format Specifier
 | void() {} | function without return | void function(int value) {printf(value); } |
 | int() {}  | function with return    | int function(int value) return value\*2; } |
 
+Good practice of function
+
+```
+// Function declaration
+int myFunction(int, int);
+
+// The main method
+int main() {
+  int result = myFunction(5, 3); // call the function
+  printf("Result is = %d", result);
+  return 0;
+}
+
+// Function definition
+int myFunction(int x, int y) {
+  return x + y;
+}
+```
+
 ### Arrays
 
 - First index has an identifying value of 0
