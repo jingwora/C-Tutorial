@@ -356,10 +356,20 @@ int myFunction(int x, int y) {
 
 ## File
 
-- fopen : open a file : ptr = fopen(char* filename, char* mode)
+- fopen_s : open a file : ptr = fopen(char* filename, char* mode)
 - fclose : close file : fclose(ptr);
 - fprintf() : write with formatting
-- fputs() : write
+- fputs() : write (just print out, faster)
+
+| Functions | Description            | Example                                            |
+| --------- | ---------------------- | -------------------------------------------------- |
+| FILE      | create file            | FILE\* ptr;                                        |
+| fopen_s   | open file              | errno_t result = fopen_s(&ptr, "output.txt", "w"); |
+| fprintf   | write file with format | fprintf(ptr, "Hello, %s!\n", "world");             |
+| fputs     | write file             | fputs("This is a test.\n", ptr);                   |
+| fclose    | close file             | fclose(ptr);                                       |
+
+fopen_s() mode
 
 | Mode | Description                    |
 | ---- | ------------------------------ |
