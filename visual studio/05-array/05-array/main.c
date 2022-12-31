@@ -45,6 +45,7 @@ void function2()
 
 
 // function3
+// box
 void function3(size_t length, int myArray[])
 {
 	for (int i = 0; i < length; i++)
@@ -54,15 +55,30 @@ void function3(size_t length, int myArray[])
 	printf("Length: %lu\n", length);
 }
 
+// function4
+// matrix
+void function4()
+{
+	int matrix[2][3] = { {1, 4, 2}, {3, 6, 8} };
+
+	int i, j;
+	for (i = 0; i < 2; i++) {
+		for (j = 0; j < 3; j++) {
+			printf("%d\n", matrix[i][j]);
+		}
+	}
+}
 
 int main()
 {
 	//function1();
 	//function2();
 
-	int ages[] = { 10, 20, 30, 40 };
-	size_t ageLength = sizeof(ages) / sizeof(ages[0]);
-	function3(ageLength, ages);
+	//int ages[] = { 10, 20, 30, 40 };
+	//size_t ageLength = sizeof(ages) / sizeof(ages[0]);
+	//function3(ageLength, ages);
+
+	function4();
 
 	return 0;
 }
