@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_641d897ab08816d8f259c6dda3b8634d" kind="dir">
+    <compoundname>06-pointers</compoundname>
+    <innerfile refid="main_8c">main.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Repos/C-Tutorial/visual studio/06-pointers/06-pointers/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,9 @@
+﻿  main.c
+D:\Repos\C-Tutorial\visual studio\03-iteration\03-iteration\main.c(39,6): warning C4101: 'i': unreferenced local variable
+D:\Repos\C-Tutorial\visual studio\03-iteration\03-iteration\main.c(93,11): warning C4473: 'scanf_s' : not enough arguments passed for format string
+D:\Repos\C-Tutorial\visual studio\03-iteration\03-iteration\main.c(93,11): message : placeholders and their parameters expect 2 variadic arguments, but 1 were provided
+D:\Repos\C-Tutorial\visual studio\03-iteration\03-iteration\main.c(93,11): message : the missing variadic argument 2 is required by format string '%c'
+D:\Repos\C-Tutorial\visual studio\03-iteration\03-iteration\main.c(93,11): message : this argument is used as a buffer size
+D:\Repos\C-Tutorial\visual studio\03-iteration\03-iteration\main.c(169,9): warning C4101: 'w': unreferenced local variable
+D:\Repos\C-Tutorial\visual studio\03-iteration\03-iteration\main.c(169,6): warning C4101: 'h': unreferenced local variable
+  03-iteration.vcxproj -> D:\Repos\C-Tutorial\visual studio\03-iteration\Debug\03-iteration.exe

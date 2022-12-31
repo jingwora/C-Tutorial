@@ -6,6 +6,22 @@ Condition1
 
 #include <stdio.h>
 
+int condition1();
+int condition2();
+int condition3();
+int condition4();
+
+int main()
+{
+	condition1();
+	//condition2();
+	//condition3();
+	//condition4();	
+
+	return 0;
+}
+
+
 int value = 5;
 
 // condition1
@@ -69,17 +85,6 @@ int condition4()
 	{
 		printf("4:true");
 	}
-
-	return 0;
-}
-
-
-int main()
-{
-	condition1();
-	//condition2();
-	//condition3();
-	//condition4();	
 
 	return 0;
 }

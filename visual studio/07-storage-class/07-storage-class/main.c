@@ -6,6 +6,19 @@ storage class
 
 #include <stdio.h>
 
+void function1();
+void function2();
+
+
+int main()
+{
+	//function1(); function1(); function1();
+	function2();
+
+	return 0;
+}
+
+
 void function1() 
 {
 	//This will run once 
@@ -27,13 +40,5 @@ void function2()
 }
 
 
-int main()
-{
-	//function1(); function1(); function1();
 
-	function2();
-
-
-	return 0;
-}
 

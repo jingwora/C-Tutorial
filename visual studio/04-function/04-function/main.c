@@ -7,6 +7,42 @@ void, int
 #include <stdio.h>
 
 
+void function1();
+void function2(int num1, int num2);
+void function3(char string[]);
+int function4(int num1, int num2);
+_Bool function5(int value);
+int function6(int n);
+
+
+int main()
+{
+	//function1();
+
+	//function2(10, 4);
+
+	//function3("Hello, world!");
+
+	//int result = function4(10, 4); 
+	//printf("Result: %d", result);
+
+	//int value = 2;
+	//if (function5(value) == 1)
+	//{
+	//	printf("Even");
+	//}
+	//else if (function5(value) == 0)
+	//{
+	//	printf("Odd");
+	//}
+
+	int num = 5;
+	printf("The factorial of %d is %d\n", num, function6(num));
+
+	return 0;
+}
+
+
 // function1
 // void
 void function1()
@@ -58,7 +94,6 @@ _Bool function5(int value)
 
 // function6
 // Recursion factorial
-
 int function6(int n)
 {
 	if (n == 0)
@@ -69,32 +104,4 @@ int function6(int n)
 	{
 		return n * function6(n - 1);
 	}
-}
-
-
-int main()
-{
-	//function1();
-
-	//function2(10, 4);
-
-	//function3("Hello, world!");
-
-	//int result = function4(10, 4); 
-	//printf("Result: %d", result);
-
-	//int value = 2;
-	//if (function5(value) == 1)
-	//{
-	//	printf("Even");
-	//}
-	//else if (function5(value) == 0)
-	//{
-	//	printf("Odd");
-	//}
-
-	int num = 5;
-	printf("The factorial of %d is %d\n", num, function6(num));
-
-	return 0;
 }

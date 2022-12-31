@@ -7,6 +7,31 @@ for, while, do while, break, continue
 #include <stdio.h>
 
 
+int iteration1();
+int iteration2();
+int iteration3();
+int iteration4();
+int iteration5();
+int iteration6();
+int iteration7();
+int iteration8();
+
+
+int main()
+{
+	iteration1();
+	iteration2();
+	iteration3();
+	iteration4();
+	iteration5();
+	iteration6();
+	iteration7();
+	iteration8();
+
+	return 0;
+}
+
+
 // iteration1
 // for loop
 int iteration1()
@@ -151,21 +176,6 @@ int iteration8()
 		}
 		printf("\n");
 	}
-
-	return 0;
-}
-
-
-int main()
-{
-	iteration1();
-	//iteration2();
-	//iteration3();
-	//iteration4();
-	//iteration5();
-	//iteration6();
-	//iteration7();
-	//iteration8();
 
 	return 0;
 }

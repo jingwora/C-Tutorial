@@ -6,6 +6,26 @@ Condition2
 
 #include <stdio.h> 
 
+
+int condition1();
+int condition2();
+int condition3();
+int condition4();
+int condition5();
+
+
+int main()
+{
+	condition1();
+	condition2();
+	condition3();
+	condition4();
+	condition5();
+
+	return 0;
+}
+
+
 // condition1
 // more or less
 int condition1()
@@ -95,18 +115,6 @@ int condition5()
 {
 	int value = 20;
 	(value < 18) ? printf("yes") : printf("no");
-
-	return 0;
-}
-
-
-int main()
-{
-	//condition1();
-	//condition2();
-	//condition3();
-	//condition4();
-	condition5();
 
 	return 0;
 }

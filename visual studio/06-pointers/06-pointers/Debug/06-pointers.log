@@ -1,4 +1,4 @@
-﻿  06-pointers.c
-D:\Repos\C-Tutorial\visual studio\06-pointers\06-pointers\06-pointers.c(44,20): warning C4018: '<': signed/unsigned mismatch
-D:\Repos\C-Tutorial\visual studio\06-pointers\06-pointers\06-pointers.c(42,1): warning C4047: 'initializing': 'int *' differs in levels of indirection from 'int (*)[3]'
+﻿  main.c
+D:\Repos\C-Tutorial\visual studio\06-pointers\06-pointers\main.c(69,20): warning C4018: '<': signed/unsigned mismatch
+D:\Repos\C-Tutorial\visual studio\06-pointers\06-pointers\main.c(67,1): warning C4047: 'initializing': 'int *' differs in levels of indirection from 'int (*)[3]'
   06-pointers.vcxproj -> D:\Repos\C-Tutorial\visual studio\06-pointers\Debug\06-pointers.exe

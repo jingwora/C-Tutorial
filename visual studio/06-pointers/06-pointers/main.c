@@ -6,6 +6,31 @@ Pointer
 
 #include <stdio.h>
 
+void function1();
+void function2();
+void function3();
+void function4(int value1, int value2);
+void function5(int value1, int value2, int(*opp)(int, int));
+int add(int num1, int num2);
+int sub(int num1, int num2);
+
+int main()
+{
+	function1();
+	function2();
+	function3();
+
+	void(*functionPtr)(int, int);
+	functionPtr = &function4;
+	(*functionPtr)(100, 200);
+
+	function5(10, 20, &add);
+	function5(10, 20, &sub);
+
+	return 0;
+}
+
+
 // function1
 // address
 void function1()
@@ -58,6 +83,7 @@ void function4(int value1, int value2)
 	printf("Result : %d", result);
 }
 
+
 // function5
 // calculator
 void function5(int value1, int value2, int(*opp)(int, int))
@@ -74,20 +100,4 @@ int add(int num1, int num2)
 int sub(int num1, int num2)
 {
 	return num1 - num2;
-}
-
-int main()
-{
-	//function1();
-	//function2();
-	//function3();
-	
-	//void(*functionPtr)(int, int);
-	//functionPtr = &function4;
-	//(*functionPtr)(100, 200);
-
-	function5(10, 20, &add);
-	function5(10, 20, &sub);
-
-	return 0;
 }

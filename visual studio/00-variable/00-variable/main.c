@@ -6,6 +6,33 @@ printf, scanf_s, sizeof, strlen, strcpy_c, strcat_s, strcmp
 
 #include <stdio.h>
 
+
+int function1();
+int function2();
+int function3();
+int function4();
+int function5();
+int function6();
+int function7();
+int function8();
+int function9();
+
+int main()
+{
+	//function1();
+	//function2();
+	function3();
+	//function4();
+	//function5();
+	//function6();
+	//function7();
+	//function8();
+	//function9();
+
+	return 0;
+}
+
+
 // function1
 // printf
 int function1()
@@ -163,22 +190,6 @@ int function9()
 
 	// Compare str1 and str3, and print the result
 	printf("%d\n", strcmp(str1, str3));  // Returns -1 (the strings are not equal)
-
-	return 0;
-}
-
-
-int main()
-{
-	//function1();
-	//function2();
-	function3();
-	//function4();
-	//function5();
-	//function6();
-	//function7();
-	//function8();
-	//function9();
 
 	return 0;
 }

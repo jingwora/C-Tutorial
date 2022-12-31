@@ -6,6 +6,26 @@ sizeof
 
 #include <stdio.h>
 
+void function1();
+void function2();
+void function3(size_t length, int myArray[]);
+void function4();
+
+
+int main()
+{
+	//function1();
+	//function2();
+
+	//int ages[] = { 10, 20, 30, 40 };
+	//size_t ageLength = sizeof(ages) / sizeof(ages[0]);
+	//function3(ageLength, ages);
+
+	function4();
+
+	return 0;
+}
+
 
 // function1
 // array  arrayLength
@@ -67,18 +87,4 @@ void function4()
 			printf("%d\n", matrix[i][j]);
 		}
 	}
-}
-
-int main()
-{
-	//function1();
-	//function2();
-
-	//int ages[] = { 10, 20, 30, 40 };
-	//size_t ageLength = sizeof(ages) / sizeof(ages[0]);
-	//function3(ageLength, ages);
-
-	function4();
-
-	return 0;
 }

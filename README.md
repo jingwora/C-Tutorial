@@ -334,6 +334,26 @@ int myFunction(int x, int y) {
 - gcc -I/usr/local/include main.c -o main
 - gcc -I/D/Repos/C-Tutorial/visual studio/01-condition1/01-condition1 01-condition1.c -o main
 
+### Math function
+
+- #include <math.h>
+
+| Functions | Description                 |
+| --------- | --------------------------- |
+| abs(x)    | absolute value of x         |
+| acos(x)   | arccosine of x              |
+| asin(x)   | arcsine of x                |
+| atan(x)   | arctangent of x             |
+| cbrt(x)   | cube root of x              |
+| cos(x)    | cosine of x                 |
+| exp(x)    | e power x                   |
+| sin(x)    | sine of x (x is in radians) |
+| tan(x)    | tangent of x                |
+| pow(x)    | x to the power of y         |
+| ceil(x)   | rounds upward               |
+| floor(x)  | rounds downward             |
+| sqrt(x)   | square root of x            |
+
 ## Library
 
 - \#include
@@ -343,3 +363,4 @@ int myFunction(int x, int y) {
 | <stdio.h>   | Input and output functions, such as printf() |
 | <stdbool.h> | To use boolean variable, such as bool        |
 | <string.h>  | To use string functions, such as strlen      |
+| <math.h>    | To use match functions, such as sqrt,pow     |

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_425d4bba4b9b8194f753b4ba82d89b10" kind="dir">
+    <compoundname>03-iteration</compoundname>
+    <innerfile refid="main_8c">main.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Repos/C-Tutorial/visual studio/03-iteration/03-iteration/"/>
+  </compounddef>
+</doxygen>
