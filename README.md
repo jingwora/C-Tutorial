@@ -229,6 +229,7 @@ Format Specifier
 
 ### Functions
 
+- A function is a block of code which only runs when it is called.
 - A method has two elements, parameters:(passed values) and the return type (returned values).
 - Void is used when you are not required to return.
 - Void main() cannot use exit() method so it is good practice to use int main() over the void main().
@@ -256,13 +257,16 @@ Format Specifier
 ### Pointer
 
 - The memory address of a variable
+- Pointers can reduce the code and improve the performance.
 - Passing by reference
 - The function pointer can be passed as a parameter
 - & : (Reference Operator) is used to return the memory location.
 - %x : a memory location is inhexadecimal
 - %p : a pointer
 - \* : to create a pointer variable
-- printf("The address is: %p\n", &var);
+- To creates a pointer variable: int\* ptr = &var;
+- To print pointer: printf("The address is: %p\n", &var);
+- To print dereference: printf("%d\n", \*ptr);
 - function(int value1, int value2, int(\*opp)(int, int))
 
 ### Storage Classifications
