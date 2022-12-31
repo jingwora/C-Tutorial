@@ -1,3 +1,5 @@
 ﻿  main.c
-D:\Repos\C-Tutorial\visual studio\10-structures\10-structures\main.c(40,8): warning C4013: 'strcpy' undefined; assuming extern returning int
+D:\Repos\C-Tutorial\visual studio\10-structures\10-structures\main.c(55,8): warning C4013: 'strcpy' undefined; assuming extern returning int
+D:\Repos\C-Tutorial\visual studio\10-structures\10-structures\main.c(129,15): warning C4305: '=': truncation from 'double' to 'float'
+D:\Repos\C-Tutorial\visual studio\10-structures\10-structures\main.c(133,10): warning C4013: 'strcpy_s' undefined; assuming extern returning int
   10-structures.vcxproj -> D:\Repos\C-Tutorial\visual studio\10-structures\Debug\10-structures.exe

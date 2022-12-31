@@ -1,13 +1,15 @@
 /*
 C-Tutorail in visual studio
 Structures
-struct, strcpy
+struct, strcpy, typedef, enum, union
 */
 
 #include <stdio.h>
 
 void printStructure(struct Student p);
 void function1();
+void function2();
+void function3();
 
 // structures
 struct Student {
@@ -36,7 +38,11 @@ typedef struct {
 
 int main()
 {
-	function1();
+	//function1();
+	//function2();
+	function3();
+
+	return 0;
 }
 
 // function1
@@ -71,3 +77,60 @@ void printStructure(struct Student s)
 	printf("Age: %d\n", s.age); 
 	puts("");
 };
+
+
+// function2
+// enum
+void function2()
+{
+	enum Level {
+		LOW = 1,
+		MEDIUM,
+		HIGH
+	};
+
+	enum Level myVar = MEDIUM;
+
+	printf("%d : ", myVar);
+
+	switch (myVar) {
+	case 1:
+		printf("Low Level");
+		break;
+	case 2:
+		printf("Medium level");
+		break;
+	case 3:
+		printf("High level");
+		break;
+	}
+}
+
+
+// function3
+// union
+void function3()
+{
+	// Define the union
+	union Data {
+		int i;
+		float f;
+		char str[20];
+	};
+
+	// Declare a variable of the Data union type
+	union Data data;
+
+	// Set the integer field of the union
+	data.i = 10;
+	printf("Integer: %d\n", data.i);
+
+	// Set the float field of the union
+	data.f = 3.14;
+	printf("Float: %f\n", data.f);
+
+	// Set the string field of the union
+	strcpy_s(data.str, sizeof(data.str), "Hello");
+	printf("String: %s\n", data.str);
+
+}

@@ -382,6 +382,9 @@ typedef struct {
 ### Enumeration
 
 - A group of constants (unchangeable values)
+- By default, the first item has the value 0, the second has the value 1, etc.
+- Print result is 0, 1,..
+- Use enums when you have values that you know aren't going to change, like month days, days, colors, deck of cards, etc.
 
 ```
 enum Level {
@@ -393,6 +396,29 @@ enum Level {
 enum Level myVar;  // access the enum
 
 enum Level myVar = MEDIUM; // assigned value
+
+```
+
+### Unions
+
+- To store different data types in the same memory location
+- This size of the unions is as large as the largest variable (smaller than structure)
+- Drawback: changing one value effects every other variable,
+
+```
+// Define the union
+union Data {
+	int i;
+	float f;
+	char str[20];
+};
+
+// Declare a variable of the Data union type
+union Data data;
+
+// Set the integer field of the union
+data.i = 10;
+printf("Integer: %d\n", data.i);
 
 ```
 
