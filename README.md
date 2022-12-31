@@ -354,6 +354,22 @@ int myFunction(int x, int y) {
 | floor(x)  | rounds downward             |
 | sqrt(x)   | square root of x            |
 
+## File
+
+- fopen : open a file : ptr = fopen(char* filename, char* mode)
+- fclose : close file : fclose(ptr);
+- fprintf() : write with formatting
+- fputs() : write
+
+| Mode | Description                    |
+| ---- | ------------------------------ |
+| r    | read file                      |
+| w    | create/write file              |
+| a    | create/append file             |
+| r+   | read and write file            |
+| w+   | read and write, truncates file |
+| a+   | read and write, append file    |
+
 ## Library
 
 - \#include
