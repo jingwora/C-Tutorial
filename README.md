@@ -101,11 +101,21 @@ VSCODE Setting
 
 ### String
 
+Escape characters
+
 - String: a array of characters
-- \n : special character for a newline
-- \t : special character for a tab
+- \n : New Line
+- \t : Tab
+- \0 : Null
 - \\\\ : backslash
 - \\" : double quote
+- \ : Escape character
+
+--
+
+- char greetings[] = "Hello World!";
+- char greetings[] = {'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd', '!', '\0'};
+- \0: "null terminating character"
 
 ### Booleans
 
@@ -128,16 +138,33 @@ VSCODE Setting
 | \_Bool    | variable readonly      | \_Bool falseIsDetected = 0;                     |
 | bool      | boolean variable (C99) | bool boolValue = true;                          |
 | const     | readonly variable      | const float PI = 3.14f;                         |
-| printf()  | print value            | printf("Hello, world!");                        |
-| printf()  | print integer          | printf("Integer: %d\n", integer);               |
-| puts()    | print string           | puts("Hello, world!");                          |
-| scanf_s() | input                  | int num; scanf_s(" %d", &num);                  |
-| sizeof()  | memory size            | sizeof(myInt)                                   |
+
+Print functions
+
+| Functions | Description          | Example                                                       |
+| --------- | -------------------- | ------------------------------------------------------------- |
+| printf()  | print value          | printf("Hello, world!");                                      |
+| printf()  | print integer        | printf("Integer: %d\n", integer);                             |
+| puts()    | print string         | puts("Hello, world!");                                        |
+| scanf_s() | input single word    | int num; scanf_s(" %d", &num);                                |
+| fgets()   | input multiple words | char sentence[100]; fgets(sentence, sizeof(sentence), stdin); |
 
 - Declare Multiple Variables
 - int x = 1, y = 2, z = 3;
 - Manual conversion: int to float float sum = (float) 5 / 2;
+
+String functions
+
+| Functions  | Description            | Example                                              |
+| ---------- | ---------------------- | ---------------------------------------------------- |
+| sizeof()   | memory size            | sizeof(alphabet)                                     |
+| strlen()   | string length          | strlen(alphabet)                                     |
+| strcpy_c() | copy string            | errno_t result = strcpy_s(str2, sizeof(str2), str1); |
+| strcat_s() | concatenate string     | errno_t result = strcat_s(str1, sizeof(str1), str2); |
+| strcmp()   | compare string 0=equal | strcmp(str1, str2)                                   |
+
 - In C you cannot get the length directly
+- sizeof will always return the memory size (in bytes), and not the actual string length
 
 Format Specifier
 
@@ -218,13 +245,15 @@ Format Specifier
 
 - First index has an identifying value of 0
 - To access index[0]
+- To change value in array. myArray[0] = 1;
+- int matrix[2][3] = { {1, 4, 2}, {3, 6, 8} }; //2 rows 3 columns
 
 | Functions          | Description | Example                                               |
 | ------------------ | ----------- | ----------------------------------------------------- |
 | int myArray[][2]   | 2d array    | int myArray[][2] = {{1, 2}, {3, 4}};                  |
 | int myArray[][][2] | 3d array    | int myArray[][][2] = {{{1,1},{1,1}}, {{1,1}, {1,1}}}; |
 
-### pointer
+### Pointer
 
 - The memory address of a variable
 - Passing by reference
@@ -284,7 +313,10 @@ Format Specifier
 
 ## Library
 
-| library               | Description                                  |
-| --------------------- | -------------------------------------------- |
-| \#include <stdio.h>   | Input and output functions, such as printf() |
-| \#include <stdbool.h> | To use boolean variable, such as bool        |
+- \#include
+
+| library     | Description                                  |
+| ----------- | -------------------------------------------- |
+| <stdio.h>   | Input and output functions, such as printf() |
+| <stdbool.h> | To use boolean variable, such as bool        |
+| <string.h>  | To use string functions, such as strlen      |
