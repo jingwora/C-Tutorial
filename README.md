@@ -420,6 +420,13 @@ printf("Integer: %d\n", data.i); // Access members of a union
 
 ```
 
+### Variable argument lists
+
+- Function that can accept a variable number of arguments
+- va_list : create variable argument list
+- va_start : start
+- va_end : end and cleans up the memory
+
 ### Math function
 
 - #include <math.h>
@@ -466,6 +473,13 @@ fopen_s() mode
 | w+   | read and write, truncates file |
 | a+   | read and write, append file    |
 
+### Header files
+
+- A header file is a list of function, variable and macro definitions that can be
+  included and used in different files.
+
+- .h filename extensions
+
 ## Library
 
 - \#include
@@ -475,4 +489,5 @@ fopen_s() mode
 | <stdio.h>   | Input and output functions, such as printf() |
 | <stdbool.h> | To use boolean variable, such as bool        |
 | <string.h>  | To use string functions, such as strlen      |
+| <stdarg.h>  | To use variable argument list                |
 | <math.h>    | To use match functions, such as sqrt,pow     |
