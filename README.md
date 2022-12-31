@@ -265,18 +265,18 @@ Format Specifier
 - create extern.c
 - int x = 42;
 
----
+--
 
 - create extern.h
 - extern int x;
 
----
+--
 
 - create main.c
 - #include "extern.h"
 - printf("x = %d\n", x);
 
----
+--
 
 - To add a directory to the include path ?
 - gcc -I/usr/local/include main.c -o main
