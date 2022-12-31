@@ -134,6 +134,7 @@ VSCODE Setting
 | const     | readonly variable      | const float PI = 3.14f;                         |
 | printf()  | print value            | printf("Hello, world!");                        |
 | printf()  | print integer          | printf("Integer: %d\n", integer);               |
+| puts()    | print string           | puts("Hello, world!");                          |
 | scanf_s() | input                  | int num; scanf_s(" %d", &num);                  |
 | sizeof()  | memory size            | sizeof(myInt)                                   |
 
@@ -226,6 +227,18 @@ Format Specifier
 | ------------------ | ----------- | ----------------------------------------------------- |
 | int myArray[][2]   | 2d array    | int myArray[][2] = {{1, 2}, {3, 4}};                  |
 | int myArray[][][2] | 3d array    | int myArray[][][2] = {{{1,1},{1,1}}, {{1,1}, {1,1}}}; |
+
+### pointer
+
+- The memory address of a variable
+- Passing by reference
+- The function pointer can be passed as a parameter
+- & : (Reference Operator) is used to return the memory location.
+- %x : a memory location is inhexadecimal
+- %p : a pointer
+- \* : to create a pointer variable
+- printf("The address is: %p\n", &var);
+- function(int value1, int value2, int(\*opp)(int, int))
 
 ## Library
 

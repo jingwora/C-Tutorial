@@ -1,4 +1,0 @@
-﻿  variable.c
-D:\Repos\C-Tutorial\visual studio\c tutorial-00\c tutorial-00\variable.c(14,1): warning C4305: 'initializing': truncation from 'double' to 'float'
-D:\Repos\C-Tutorial\visual studio\c tutorial-00\c tutorial-00\variable.c(54): warning C4716: 'variable3': must return a value
-  c tutorial-00.vcxproj -> D:\Repos\C-Tutorial\visual studio\c tutorial-00\Debug\c tutorial-00.exe
