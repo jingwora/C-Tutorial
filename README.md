@@ -12,11 +12,7 @@ C programming language summary with sample codes.
 - C is amoung the most popular programming languages.
   TIOBE Index for December 2022
 
-1. Python
-2. C
-3. C++
-4. Java
-5. C#
+- 1. Python | 2. C | 3. C++ | 4. Java | 5. C#
 
 - It has largely been superseded in that domain by higher-level languages, such as C++, Objective-C, C#, and Java.
 
@@ -269,12 +265,18 @@ Format Specifier
 - create extern.c
 - int x = 42;
 
+---
+
 - create extern.h
 - extern int x;
+
+---
 
 - create main.c
 - #include "extern.h"
 - printf("x = %d\n", x);
+
+---
 
 - To add a directory to the include path ?
 - gcc -I/usr/local/include main.c -o main
