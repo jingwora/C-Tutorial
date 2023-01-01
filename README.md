@@ -578,11 +578,23 @@ void function1()
 }
 ```
 
+### Memory management
+
+- #include <stdlib.h>
+
+| Function                                  | Description                                   |
+| ----------------------------------------- | --------------------------------------------- |
+| void \*calloc(int num, int size);         | allocates an array and the size               |
+| void free(void \*address);                | releases memory                               |
+| void \*malloc(int num);                   | calloc but leaves the locations uninitialized |
+| void \*malloc(int num);                   | calloc but leaves the locations uninitialized |
+| void *realloc(void *address, int newsize) | re-allocates memory to specified in newsize   |
+
 ## Library
 
 - \#include
 
-| library     | Description                                  |
+| Library     | Description                                  |
 | ----------- | -------------------------------------------- |
 | <stdio.h>   | Input and output functions, such as printf() |
 | <stdbool.h> | To use boolean variable, such as bool        |
@@ -590,3 +602,6 @@ void function1()
 | <stdarg.h>  | To use variable argument list                |
 | <math.h>    | To use match functions, such as sqrt,pow     |
 | <error.h>   | To use error handling functions              |
+| <stdlib.h>  | To use memory management functions           |
+
+- #define \_CRT_SECURE_NO_DEPRECATE // to use deprecated functions

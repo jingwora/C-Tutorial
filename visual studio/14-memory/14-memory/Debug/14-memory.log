@@ -1,0 +1,8 @@
+﻿  main.c
+D:\Repos\C-Tutorial\visual studio\14-memory\14-memory\main.c(45,8): warning C4013: 'strcpy' undefined; assuming extern returning int
+D:\Repos\C-Tutorial\visual studio\14-memory\14-memory\main.c(58,8): warning C4476: 'scanf' : unknown type field character ' ' in format specifier
+D:\Repos\C-Tutorial\visual studio\14-memory\14-memory\main.c(58,16): warning C4474: 'scanf' : too many arguments passed for format string
+D:\Repos\C-Tutorial\visual studio\14-memory\14-memory\main.c(58,16): message : placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+D:\Repos\C-Tutorial\visual studio\14-memory\14-memory\main.c(60,18): warning C4013: 'strlen' undefined; assuming extern returning int
+D:\Repos\C-Tutorial\visual studio\14-memory\14-memory\main.c(49): warning C4716: 'function1': must return a value
+  14-memory.vcxproj -> D:\Repos\C-Tutorial\visual studio\14-memory\Debug\14-memory.exe
