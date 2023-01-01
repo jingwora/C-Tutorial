@@ -40,10 +40,26 @@ Popular IDE's include Code::Blocks, Eclipse, Visual Studio, and CodeLite.
 
 ### Visual Studio
 
-- Install Visual Studio IDE
+Installation
+
+- Donwnload and install Visual Studio
+
+Create new project
+
+- Create a new project > Empty Project > Next
+
+- Input project name and choose path > Create
+
 - Right click on the .c file and click “Properties”. Then expand the C/C++ menu, go to “Advanced”, loop for the “Compile As” section and select from the drop down menu “Compile as C Code (/TC)”
 
+Run
+
+- Build > Build solution
+- Debug > Start without debugging
+
 ### Code::Blocks
+
+Installation
 
 - http://www.codeblocks.org/downloads/binaries
 - codeblocks-20.03mingw-setup.exe
@@ -63,9 +79,11 @@ Run
 
 - https://www.codechef.com/ide
 
-### Setup for VSCODE
+### VSCODE
 
-Code Setting
+Installation
+
+Complier Setting
 
 - Setup Mingw
 - Install & Setup MSYS2
@@ -75,6 +93,7 @@ Code Setting
 
 VSCODE Setting
 
+- Install VSCODE
 - Install C/C++ Extension
 - Install Code Runner Extension
 - File > Preference > Setting > Extension > Run code configuration > Check Run In Terminal
