@@ -317,23 +317,23 @@ Format Specifier
 
 ### Logical Operators
 
-| Functions          | Description          | Example                                                      |
-| ------------------ | -------------------- | ------------------------------------------------------------ |
-| !                  | not                  | !value                                                       |
-| &&                 | and                  | if (value1 == 5 && value2 == 5)                              |
-| \|\|               | or                   | if (value1 == 5 \|\| value2 == 5)                            |
-| if() {}            | if condition         | if (value > 5) {printf("yes");}                              |
-| if() {} else {}    | if else condition    | if (value > 5) {printf("yes");} else {printf("no");}         |
-| if() {} else if {} | if else if condition | if (v > 5) {printf("yes");} else if (v <= 5) {printf("no");} |
-| switch()           | switch-case          | if (v > 5) {printf("yes");} else if (v <= 5) {printf("no");} |
-| break              | stop loop            | break;                                                       |
-| continue           | skip full iteration  | continue;                                                    |
+| Functions          | Description  | Example                                                          |
+| ------------------ | ------------ | ---------------------------------------------------------------- |
+| !                  | not          | !value                                                           |
+| &&                 | and          | if (value1 == 5 && value2 == 5)                                  |
+| \|\|               | or           | if (value1 == 5 \|\| value2 == 5)                                |
+| if() {}            | if           | if (value > 5) {printf("yes");}                                  |
+| if() {} else {}    | if else      | if (value > 5) {printf("yes");} else {printf("no");}             |
+| if() {} else if {} | if else if   | if (v > 5) {printf("Y");} else if (v <= 5) {printf("N");}        |
+| switch() {case}    | switch-case  | switch (c) {case 1: printf(1); break; default:printf(0); break;} |
+| break              | stop loop    | break;                                                           |
+| continue           | skip iterate | continue;                                                        |
 
 ### Iteration
 
 | Functions     | Description   | Example                                                     |
 | ------------- | ------------- | ----------------------------------------------------------- |
-| for() {}      | for loop      | int i = 1; for(int i = 0; i < 10; i++) {printf(“Looped!”);} |
+| for() {}      | for loop      | int i = 1; for(int i = 0; i < 10; i++) {printf("Looped!");} |
 | while() {}    | while loop    | int i = 1; while (i <= 10) {printf("Looped!"); i++;}        |
 | do {} while() | do while loop | int i = 1; do {printf("Looped!"); i++;} while (i <= 10)     |
 
