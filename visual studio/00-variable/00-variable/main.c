@@ -2,6 +2,7 @@
 C-Tutorail in visual studio
 Variables
 printf, scanf_s, sizeof, strlen, strcpy_c, strcat_s, strcmp
+(int), 
 */
 
 #include <stdio.h>
@@ -16,18 +17,20 @@ int function6();
 int function7();
 int function8();
 int function9();
+int function10();
 
 int main()
 {
 	//function1();
 	//function2();
-	function3();
+	//function3();
 	//function4();
 	//function5();
 	//function6();
 	//function7();
 	//function8();
 	//function9();
+	function10();
 
 	return 0;
 }
@@ -193,3 +196,28 @@ int function9()
 
 	return 0;
 }
+
+// function10
+// change type
+
+int function10(void) {
+	int Integer = 42;
+	float Float = 3.14;
+	char Character = 'A';
+
+	// Implicit type conversion
+	float resultFloat = Integer + Float;  // resultFloat = 45.14
+	int resultInt1 = Float + Character;   // resultInt1 = 100 (ASCII value of 'A' is 65)
+
+	// Explicit type conversion using a cast
+	int resultInt2 = (int)Float + Character;  // resultInt2 = 68 (3 + 65)
+
+	// Use a function to convert the type
+	double resultDouble = atof("3.14");  // resultDouble = 3.14
+
+	printf("10: a = %d, b = %f, c = %c, d = %f, e = %d, f = %d, g = %lf\n",
+		Integer, Float, Character, resultFloat, resultInt1, resultInt2, resultDouble);
+
+	return 0;
+}
+

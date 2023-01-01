@@ -153,6 +153,23 @@ Print functions
 - int x = 1, y = 2, z = 3;
 - Manual conversion: int to float float sum = (float) 5 / 2;
 
+### Type casting
+
+- To convert from one type to another
+
+Implicit type conversion :
+
+- float resultFloat = Integer + Float;
+- int resultInt = Float + Character; // ASCII value of 'A' is 65
+
+Explicit type conversion using a cast
+
+- int resultInt2 = (int)Float + Character;
+
+Use a function to convert the type
+
+- double resultDouble = atof("3.14");
+
 String functions
 
 | Functions  | Description            | Example                                              |

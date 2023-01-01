@@ -1,3 +1,6 @@
 ﻿  main.c
-D:\Repos\C-Tutorial\visual studio\00-variable\00-variable\main.c(41,1): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Repos\C-Tutorial\visual studio\00-variable\00-variable\main.c(44,1): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Repos\C-Tutorial\visual studio\00-variable\00-variable\main.c(216,28): warning C4013: 'atof' undefined; assuming extern returning int
+D:\Repos\C-Tutorial\visual studio\00-variable\00-variable\main.c(205,1): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Repos\C-Tutorial\visual studio\00-variable\00-variable\main.c(210,1): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   00-variable.vcxproj -> D:\Repos\C-Tutorial\visual studio\00-variable\Debug\00-variable.exe
