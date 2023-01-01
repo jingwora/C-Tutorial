@@ -477,8 +477,47 @@ fopen_s() mode
 
 - A header file is a list of function, variable and macro definitions that can be
   included and used in different files.
-
 - .h filename extensions
+- To make modules that can be reused between projects.
+- #include"“header.h"
+
+header.h
+
+```
+int x = 10;
+
+int Function() {
+return x;
+}
+```
+
+main.c
+
+```
+#include <stdio.h>
+#include "header.h"
+
+int main() {
+printf("%d", Function());
+}
+```
+
+### Pre-Processor Directives
+
+- Set global values (constant) : #define LOOP_NUMBER 2 (No semicolon!)
+- #undef is normally used to overwrite #define
+- #ifdef and #if #ifdef and #ifndef : most common use for checking if -DDEBUG mode
+
+| Directive | Description                               |
+| --------- | ----------------------------------------- |
+| #define   | Define a macro                            |
+| #undef    | Remove #define                            |
+| #ifdef    | Returns true if this macro is defined     |
+| #ifndef   | Returns true if this macro is not defined |
+| #if       | Tests if a compile time condition is true |
+| #else     | The alternative for #if                   |
+| #elif     | #else and #if in one statement            |
+| #endif    | Ends pre-processor conditional            |
 
 ## Library
 
