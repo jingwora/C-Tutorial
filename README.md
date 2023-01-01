@@ -133,25 +133,76 @@ VSCODE Setting
 | double      | 8            | 15 decimal digits    |
 | long double | 8 or 16      | digits               |
 
+### Int
+
+- Signed and Unsigned: By default is signed which contains both positive and negative values.
+
+integer range for signed
+
+| Data Type        | range            |
+| ---------------- | ---------------- |
+| signed char      | -128 to +127     |
+| signed short     | -32768 to +32767 |
+| signed int       | -2^31 to +2^31-1 |
+| signed long      | -2^31 to +2^31-1 |
+| signed long long | -2^63 to +2^63-1 |
+
+integer range for unsigned
+
+| Data Type          | range       |
+| ------------------ | ----------- |
+| unsigned char      | 0 to 255    |
+| unsigned short     | 0 to 65535  |
+| unsigned int       | 0 to 2^32-1 |
+| unsigned long      | 0 to 2^32-1 |
+| unsigned long long | 0 to 2^64-1 |
+
+### Char
+
+- ASCII characters
+
 ### String
+
+- Array of characters
+- char myString[] = "Hi";
+- char myString[] = {'H', 'i', '\0'}; // \0: "null terminating character"
+- printf("%s", myString); // "Hi"
 
 Escape characters
 
-- String: a array of characters
-- \n : New Line
-- \t : Tab
-- \0 : Null
-- \\\\ : backslash
-- \\" : double quote
-- \ : Escape character
+| Functions | Description      |
+| --------- | ---------------- |
+| \n        | New Line         |
+| \t        | Horizontal tab   |
+| \v        | Vertical tab     |
+| \b        | Backspace        |
+| \\\\      | Backspace        |
+| \         | Escape character |
+| \'        | Single quote     |
+| \"        | Double quote     |
+| \b        | Backspace        |
+| \?        | Question mark    |
+| \f        | Form feed        |
+| \a        | Alert sound      |
+| \r        | Carriage return  |
+| \0        | Null             |
 
---
+String functions
 
-- char greetings[] = "Hello World!";
-- char greetings[] = {'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd', '!', '\0'};
-- \0: "null terminating character"
+| Functions  | Description            | Example                                              |
+| ---------- | ---------------------- | ---------------------------------------------------- |
+| sizeof()   | memory size            | result = sizeof(s1);                                 |
+| strlen()   | string length          | result = strlen(s1);                                 |
+| strcpy()   | copy string            | strcpy(s2, s1);                                      |
+| strcpy_c() | copy string            | errno_t result = strcpy_s(str2, sizeof(str2), str1); |
+| strcat()   | concatenate string     | strcat(s1, s2);                                      |
+| strcat_s() | concatenate string     | errno_t result = strcat_s(str1, sizeof(str1), str2); |
+| strcmp()   | compare string 0=equal | strcmp(str1, str2)                                   |
 
-### Booleans
+- In C you cannot get the length directly
+- sizeof will always return the memory size (in bytes), and not the actual string length
+
+### Bool
 
 - Booleans: true (1) or false (0)
 
@@ -173,7 +224,7 @@ Escape characters
 | bool      | boolean variable (C99) | bool boolValue = true;                          |
 | const     | readonly variable      | const float PI = 3.14f;                         |
 
-Print functions
+### Print functions
 
 | Functions | Description          | Example                                                       |
 | --------- | -------------------- | ------------------------------------------------------------- |
@@ -204,19 +255,6 @@ Use a function to convert the type
 
 - double resultDouble = atof("3.14");
 
-String functions
-
-| Functions  | Description            | Example                                              |
-| ---------- | ---------------------- | ---------------------------------------------------- |
-| sizeof()   | memory size            | sizeof(alphabet)                                     |
-| strlen()   | string length          | strlen(alphabet)                                     |
-| strcpy_c() | copy string            | errno_t result = strcpy_s(str2, sizeof(str2), str1); |
-| strcat_s() | concatenate string     | errno_t result = strcat_s(str1, sizeof(str1), str2); |
-| strcmp()   | compare string 0=equal | strcmp(str1, str2)                                   |
-
-- In C you cannot get the length directly
-- sizeof will always return the memory size (in bytes), and not the actual string length
-
 Format Specifier
 
 - %d or %i : char, short, or int
@@ -230,50 +268,66 @@ Format Specifier
 - %lu : long unsigned int
 - %llu : long long unsigned int
 - %p : pointer address
+- %.2f : 2 digits
 
 ### Arithmetic operations
 
-| Symbol | Description    | Example               |
-| ------ | -------------- | --------------------- |
-| +      | plus           | int result = 1 + 2;   |
-| -      | minus          | int result = 1 - 2;   |
-| /      | devide         | float result = 1 / 2; |
-| \*     | multiply       | int result = 1 \* 2;  |
-| %      | modulus        | float result = 1 % 2; |
-| ++     | increment by 1 | i++                   |
-| --     | decrement by 1 | i--                   |
-| +=     | x = x + 3      | x += 3                |
-| -=     | x = x - 3      | x -= 3                |
-| /=     | x = x / 3      | x /= 3                |
-| %=     | x = x % 3      | x %= 3                |
-| &=     | x = x & 3      | x &= 3                |
-| \|=    | x = x \| 3     | x \|= 3               |
-| ^=     | x = x ^ 3      | x ^= 3                |
-| >>=    | x = x >> 3     | x >>= 3               |
-| <<=    | x = x << 3     | x <<= 3               |
+| Symbol | Description | Example               |
+| ------ | ----------- | --------------------- |
+| +      | plus        | int result = 1 + 2;   |
+| -      | minus       | int result = 1 - 2;   |
+| /      | devide      | float result = 1 / 2; |
+| \*     | multiply    | int result = 1 \* 2;  |
+| %      | modulus     | float result = 1 % 2; |
+
+### Assignment Operators
+
+| Symbol | Description | Example |
+| ------ | ----------- | ------- |
+| +=     | x = x + 3   | x += 3  |
+| -=     | x = x - 3   | x -= 3  |
+| /=     | x = x / 3   | x /= 3  |
+| %=     | x = x % 3   | x %= 3  |
+| &=     | x = x & 3   | x &= 3  |
+| \|=    | x = x \| 3  | x \|= 3 |
+| ^=     | x = x ^ 3   | x ^= 3  |
+| >>=    | x = x >> 3  | x >>= 3 |
+| <<=    | x = x << 3  | x <<= 3 |
+
+### Increment and Decrement Operators
+
+| Symbol | Description    | Example |
+| ------ | -------------- | ------- |
+| ++     | increment by 1 | i++     |
+| --     | decrement by 1 | i--     |
 
 - i++ assign -> increment
 - ++i increment -> assign
 
-### Conditionals
+### Comparison Operators
 
-| Functions          | Description              | Example                                                      |
-| ------------------ | ------------------------ | ------------------------------------------------------------ |
-| >                  | greater than             | if (value > 5)                                               |
-| >=                 | greater than or equal to | if (value >= 5)                                              |
-| <                  | less than                | if (value < 5)                                               |
-| <=                 | less than or equal to    | if (value <= 5)                                              |
-| ==                 | equal                    | if (value == 5)                                              |
-| !=                 | not equal                | if (value != 5)                                              |
-| !                  | not                      | !value                                                       |
-| &&                 | and                      | if (value1 == 5 && value2 == 5)                              |
-| \|\|               | or                       | if (value1 == 5 \|\| value2 == 5)                            |
-| if() {}            | if condition             | if (value > 5) {printf("yes");}                              |
-| if() {} else {}    | if else condition        | if (value > 5) {printf("yes");} else {printf("no");}         |
-| if() {} else if {} | if else if condition     | if (v > 5) {printf("yes");} else if (v <= 5) {printf("no");} |
-| switch()           | switch-case              | if (v > 5) {printf("yes");} else if (v <= 5) {printf("no");} |
-| break              | stop loop                | break;                                                       |
-| continue           | skip full iteration      | continue;                                                    |
+| Functions | Description              | Example         |
+| --------- | ------------------------ | --------------- |
+| >         | greater than             | if (value > 5)  |
+| >=        | greater than or equal to | if (value >= 5) |
+| <         | less than                | if (value < 5)  |
+| <=        | less than or equal to    | if (value <= 5) |
+| ==        | equal                    | if (value == 5) |
+| !=        | not equal                | if (value != 5) |
+
+### Logical Operators
+
+| Functions          | Description          | Example                                                      |
+| ------------------ | -------------------- | ------------------------------------------------------------ |
+| !                  | not                  | !value                                                       |
+| &&                 | and                  | if (value1 == 5 && value2 == 5)                              |
+| \|\|               | or                   | if (value1 == 5 \|\| value2 == 5)                            |
+| if() {}            | if condition         | if (value > 5) {printf("yes");}                              |
+| if() {} else {}    | if else condition    | if (value > 5) {printf("yes");} else {printf("no");}         |
+| if() {} else if {} | if else if condition | if (v > 5) {printf("yes");} else if (v <= 5) {printf("no");} |
+| switch()           | switch-case          | if (v > 5) {printf("yes");} else if (v <= 5) {printf("no");} |
+| break              | stop loop            | break;                                                       |
+| continue           | skip full iteration  | continue;                                                    |
 
 ### Iteration
 
@@ -320,9 +374,11 @@ int myFunction(int x, int y) {
 ### Arrays
 
 - First index has an identifying value of 0
-- To access index[0]
+- Declaration int myArray[3]; // 3 elements
 - To change value in array. myArray[0] = 1;
+- To access : printf("%d", myArray[0]); // 1
 - int matrix[2][3] = { {1, 4, 2}, {3, 6, 8} }; //2 rows 3 columns
+- Array Size : int length = sizeof(myArray) / sizeof(int); /_ 2 _/
 
 | Functions          | Description | Example                                               |
 | ------------------ | ----------- | ----------------------------------------------------- |
@@ -331,17 +387,19 @@ int myFunction(int x, int y) {
 
 ### Pointer
 
-- The memory address of a variable
+- The memory address of a variable (pointee)
 - Pointers can reduce the code and improve the performance.
 - Passing by reference
 - The function pointer can be passed as a parameter
 - & : (Reference Operator) is used to return the memory location.
 - %x : a memory location is inhexadecimal
 - %p : a pointer
-- \* : to create a pointer variable
+- \* : to create a pointer variable (int* p; int *p; )
 - To creates a pointer variable: int\* ptr = &var;
 - To print pointer: printf("The address is: %p\n", &var);
 - To print dereference: printf("%d\n", \*ptr);
+- Pointer to pointer : int\*\* r = &p;
+- Null Pointer : int\* p = NULL; int\* p = 0;
 - function(int value1, int value2, int(\*opp)(int, int))
 
 ### Storage Classifications
