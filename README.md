@@ -48,6 +48,17 @@ Popular IDE's include Code::Blocks, Eclipse, Visual Studio, and CodeLite.
 - http://www.codeblocks.org/downloads/binaries
 - codeblocks-20.03mingw-setup.exe
 
+Create new project
+
+- File > New > Project > Console application
+- Choose C
+- Input project name
+- Finished
+
+Run
+
+- Build and Run botton
+
 ### Running C online
 
 - https://www.codechef.com/ide
@@ -87,17 +98,21 @@ VSCODE Setting
 - Letters, digits and underscores
 - Begin with a letter or an underscore (\_)
 - Case sensitive
-- Cannot contain special characters (!”£$%^&\*) etc.
+- Cannot contain special characters (!”£$%^&@\*) etc.
 - Cannot be a single digit
-- Reserved words (such as int) cannot be used as names
+- Cannot be reserved words (such as int)
 - It’s good practise to make meaningful name
 
-| Data Type | Size (bytes) | Description       |
-| --------- | ------------ | ----------------- |
-| integer   | 2 or 4       | real numbers      |
-| float     | 4            | 6 decimal digits  |
-| double    | 8            | 15 decimal digits |
-| character | 1            | real numbers      |
+| Data Type   | Size (bytes) | Description          |
+| ----------- | ------------ | -------------------- |
+| char        | 1            | Integer or character |
+| short       | 2            | Integer              |
+| int         | 2 or 4       | Integer              |
+| long        | 4 or 8       | Integer              |
+| long long   | 8            | Integer              |
+| float       | 4            | 6 decimal digits     |
+| double      | 8            | 15 decimal digits    |
+| long double | 8 or 16      | digits               |
 
 ### String
 
@@ -185,12 +200,17 @@ String functions
 
 Format Specifier
 
-- %d or %i : integer
-- %f : float
-- %lf : double
+- %d or %i : char, short, or int
+- %f : float or double
 - %c : character
 - %s : string
+- %lf : long double
+- %ld : long int
+- %lld : long long int
+- %u : unsigned char, short or int
 - %lu : long unsigned int
+- %llu : long long unsigned int
+- %p : pointer address
 
 ### Arithmetic operations
 
@@ -234,7 +254,7 @@ Format Specifier
 | if() {} else if {} | if else if condition     | if (v > 5) {printf("yes");} else if (v <= 5) {printf("no");} |
 | switch()           | switch-case              | if (v > 5) {printf("yes");} else if (v <= 5) {printf("no");} |
 | break              | stop loop                | break;                                                       |
-| continue           | continue loop            | continue;                                                    |
+| continue           | skip full iteration      | continue;                                                    |
 
 ### Iteration
 
@@ -539,6 +559,7 @@ printf("%d", Function());
 ### Error Handling
 
 - errno is a global variable that holds the last returned error code.
+- error return is normally NULL or -1.
 
 | Function   | Description                                         |
 | ---------- | --------------------------------------------------- |
@@ -605,3 +626,11 @@ void function1()
 | <stdlib.h>  | To use memory management functions           |
 
 - #define \_CRT_SECURE_NO_DEPRECATE // to use deprecated functions
+
+### References:
+
+- Modern C Quick Syntax Reference A Pocket Guide to the Language, APIs, and Library (Mikael Olsson), 2019
+
+- Ultimate Step-By-Step Guide To Learning C Programming Fast (Robert Anderson), 2017
+
+- https://www.w3schools.com/
