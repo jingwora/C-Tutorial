@@ -1,0 +1,8 @@
+﻿  main.c
+D:\Repos\C-Tutorial\visual studio\13-error\13-error\main.c(13,17): warning C4273: '_errno': inconsistent dll linkage
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\errno.h(23,27): message : see previous definition of '_errno'
+D:\Repos\C-Tutorial\visual studio\13-error\13-error\main.c(53,12): warning C4013: 'strerror' undefined; assuming extern returning int
+D:\Repos\C-Tutorial\visual studio\13-error\13-error\main.c(52,1): warning C4047: 'initializing': 'char *' differs in levels of indirection from 'int'
+D:\Repos\C-Tutorial\visual studio\13-error\13-error\main.c(87,11): warning C4098: 'function2': 'void' function returning a value
+D:\Repos\C-Tutorial\visual studio\13-error\13-error\main.c(81,1): warning C4047: 'initializing': 'char *' differs in levels of indirection from 'int'
+  13-error.vcxproj -> D:\Repos\C-Tutorial\visual studio\13-error\Debug\13-error.exe

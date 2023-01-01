@@ -1,2 +1,7 @@
 ﻿  main.c
+D:\Repos\C-Tutorial\visual studio\09-file\09-file\main.c(91,11): warning C4098: 'function3': 'void' function returning a value
+D:\Repos\C-Tutorial\visual studio\09-file\09-file\main.c(106,10): warning C4098: 'function3': 'void' function returning a value
+D:\Repos\C-Tutorial\visual studio\09-file\09-file\main.c(121,11): warning C4098: 'function4': 'void' function returning a value
+D:\Repos\C-Tutorial\visual studio\09-file\09-file\main.c(131,11): warning C4098: 'function4': 'void' function returning a value
+D:\Repos\C-Tutorial\visual studio\09-file\09-file\main.c(151,10): warning C4098: 'function4': 'void' function returning a value
   09-file.vcxproj -> D:\Repos\C-Tutorial\visual studio\09-file\Debug\09-file.exe

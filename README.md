@@ -519,6 +519,48 @@ printf("%d", Function());
 | #elif     | #else and #if in one statement            |
 | #endif    | Ends pre-processor conditional            |
 
+### Error Handling
+
+- errno is a global variable that holds the last returned error code.
+
+| Function   | Description                                         |
+| ---------- | --------------------------------------------------- |
+| perror()   | Displays the string you pass and attaches errno.    |
+| strerror() | Returns the pointer of the errno value (for saving) |
+| stderr     | Output an error to the console.                     |
+
+```
+void function1()
+{
+	FILE* file;
+	int errnum;
+
+	//Looks for file
+	file = fopen("NoFile.txt", "rb");
+
+	//If the file returned an error
+	if (file == NULL) {
+	    //Grabs error code
+		errnum = errno;
+		//Prints error code
+		fprintf(stderr, "1: Value of errno:% d\n", errno);  // 2
+
+		//Returns string provided + : and Error code message
+		perror("1: Error printed by perror");   // No such file or directory
+
+		//Grabs the error text
+		char* errorMsg[] = {
+			strerror()
+		};
+
+		printf("1: Error msg test print: %s\n", *errorMsg); } // Error msg test print: Unknown error
+
+	else {
+		fclose(file);
+	}
+}
+```
+
 ## Library
 
 - \#include
@@ -530,3 +572,4 @@ printf("%d", Function());
 | <string.h>  | To use string functions, such as strlen      |
 | <stdarg.h>  | To use variable argument list                |
 | <math.h>    | To use match functions, such as sqrt,pow     |
+| <error.h>   | To use error handling functions              |
