@@ -8,6 +8,7 @@ header.h, #define, #ifdef, #ifndef, #if, #elif, #else
 #include "header.h"
 #define LOOP_NUMBER 2 // global values - constant
 #define DEBUG 1       // define debug mode
+#pragma message "Compiling " __FILE__ "..."
 
 int main() {
 
