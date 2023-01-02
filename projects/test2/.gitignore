@@ -3,5 +3,4 @@
 
 # But not these files...
 !.gitignore
-!test2
-!test2/main.c
+!main.c
