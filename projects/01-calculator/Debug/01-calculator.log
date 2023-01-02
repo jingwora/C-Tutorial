@@ -1,0 +1,4 @@
+﻿  main.c
+D:\Repos\C-Tutorial\projects\01-calculator\main.c(38,44): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Repos\C-Tutorial\projects\01-calculator\main.c(40,35): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  01-calculator.vcxproj -> D:\Repos\C-Tutorial\projects\01-calculator\Debug\01-calculator.exe

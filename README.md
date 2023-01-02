@@ -363,6 +363,7 @@ if(done) {}  // if(done != 0)
 | do {} while() | do while loop  | int i = 1; do {printf("Loop"); i++;} while (i < 10); |
 | break         | end loop       | if (i == 5) break;                                   |
 | continue      | skip iteration | if (i == 5) continue; // start next iteration        |
+| goto          | jump to        | goto fail;                                           |
 
 Loop 2 variables
 
