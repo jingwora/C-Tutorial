@@ -189,15 +189,15 @@ Escape characters
 
 String functions
 
-| Functions  | Description            | Example                                              |
-| ---------- | ---------------------- | ---------------------------------------------------- |
-| sizeof()   | memory size            | result = sizeof(s1);                                 |
-| strlen()   | string length          | result = strlen(s1);                                 |
-| strcpy()   | copy string            | strcpy(s2, s1);                                      |
-| strcpy_c() | copy string            | errno_t result = strcpy_s(str2, sizeof(str2), str1); |
-| strcat()   | concatenate string     | strcat(s1, s2);                                      |
-| strcat_s() | concatenate string     | errno_t result = strcat_s(str1, sizeof(str1), str2); |
-| strcmp()   | compare string 0=equal | strcmp(str1, str2)                                   |
+| Functions  | Description            | Example                                         |
+| ---------- | ---------------------- | ----------------------------------------------- |
+| sizeof()   | memory size            | s = sizeof(s1);                                 |
+| strlen()   | string length          | s = strlen(s1);                                 |
+| strcpy()   | copy string            | strcpy(s2, s1);                                 |
+| strcpy_c() | copy string            | errno_t s = strcpy_s(str2, sizeof(str2), str1); |
+| strcat()   | concatenate string     | strcat(s1, s2);                                 |
+| strcat_s() | concatenate string     | errno_t s = strcat_s(str1, sizeof(str1), str2); |
+| strcmp()   | compare string 0=equal | s = strcmp(str1, str2);                         |
 
 - In C you cannot get the length directly
 - sizeof will always return the memory size (in bytes), and not the actual string length
@@ -212,27 +212,27 @@ String functions
 
 ### Variables
 
-| Functions | Description            | Example                                         |
-| --------- | ---------------------- | ----------------------------------------------- |
-| int       | main                   | int main(void){return 0;}                       |
-| int       | integer variable       | int integerValue = 3;                           |
-| float     | decimal variable       | float decimalValue = 3.0f;                      |
-| double    | decimal readonly       | double decimalValue = 3.0f;                     |
-| char      | string variable        | char word[] = "string";                         |
-| size_t    | unsigned integer value | size_t length = sizeof(ages) / sizeof(ages[0]); |
-| \_Bool    | variable readonly      | \_Bool falseIsDetected = 0;                     |
-| bool      | boolean variable (C99) | bool boolValue = true;                          |
-| const     | readonly variable      | const float PI = 3.14f;                         |
+| Functions | Description            | Example                                   |
+| --------- | ---------------------- | ----------------------------------------- |
+| int       | main                   | int main(void){return 0;}                 |
+| int       | integer variable       | int x = 3;                                |
+| float     | decimal variable       | float x = 3.0f;                           |
+| double    | decimal readonly       | double x = 3.0f;                          |
+| char      | string variable        | char s[] = "string";                      |
+| size_t    | unsigned integer value | size_t length = sizeof(s) / sizeof(s[0]); |
+| \_Bool    | variable readonly      | \_Bool falseIsDetected = 0;               |
+| bool      | boolean variable (C99) | bool x = true;                            |
+| const     | readonly variable      | const float PI = 3.14f;                   |
 
 ### Print functions
 
-| Functions | Description          | Example                                                       |
-| --------- | -------------------- | ------------------------------------------------------------- |
-| printf()  | print value          | printf("Hello, world!");                                      |
-| printf()  | print integer        | printf("Integer: %d\n", integer);                             |
-| puts()    | print string         | puts("Hello, world!");                                        |
-| scanf_s() | input single word    | int num; scanf_s(" %d", &num);                                |
-| fgets()   | input multiple words | char sentence[100]; fgets(sentence, sizeof(sentence), stdin); |
+| Functions | Description          | Example                                  |
+| --------- | -------------------- | ---------------------------------------- |
+| printf()  | print value          | printf("Hello, world!");                 |
+| printf()  | print integer        | printf("Integer: %d\n", integer);        |
+| puts()    | print string         | puts("Hello, world!");                   |
+| scanf_s() | input single word    | int num; scanf_s(" %d", &num);           |
+| fgets()   | input multiple words | char s[100]; fgets(s, sizeof(s), stdin); |
 
 - Declare Multiple Variables
 - int x = 1, y = 2, z = 3;
@@ -272,13 +272,13 @@ Format Specifier
 
 ### Arithmetic operations
 
-| Symbol | Description | Example               |
-| ------ | ----------- | --------------------- |
-| +      | plus        | int result = 1 + 2;   |
-| -      | minus       | int result = 1 - 2;   |
-| /      | devide      | float result = 1 / 2; |
-| \*     | multiply    | int result = 1 \* 2;  |
-| %      | modulus     | float result = 1 % 2; |
+| Symbol | Description | Example          |
+| ------ | ----------- | ---------------- |
+| +      | plus        | int x = 1 + 2;   |
+| -      | minus       | int x = 1 - 2;   |
+| /      | devide      | float x = 1 / 2; |
+| \*     | multiply    | int x = 1 \* 2;  |
+| %      | modulus     | float x = 1 % 2; |
 
 ### Assignment Operators
 
@@ -306,36 +306,54 @@ Format Specifier
 
 ### Comparison Operators
 
-| Functions | Description              | Example         |
-| --------- | ------------------------ | --------------- |
-| >         | greater than             | if (value > 5)  |
-| >=        | greater than or equal to | if (value >= 5) |
-| <         | less than                | if (value < 5)  |
-| <=        | less than or equal to    | if (value <= 5) |
-| ==        | equal                    | if (value == 5) |
-| !=        | not equal                | if (value != 5) |
+| Functions | Description              | Example     |
+| --------- | ------------------------ | ----------- |
+| >         | greater than             | if (x > 5)  |
+| >=        | greater than or equal to | if (x >= 5) |
+| <         | less than                | if (x < 5)  |
+| <=        | less than or equal to    | if (x <= 5) |
+| ==        | equal                    | if (x == 5) |
+| !=        | not equal                | if (x != 5) |
 
 ### Logical Operators
 
-| Functions          | Description  | Example                                                          |
-| ------------------ | ------------ | ---------------------------------------------------------------- |
-| !                  | not          | !value                                                           |
-| &&                 | and          | if (value1 == 5 && value2 == 5)                                  |
-| \|\|               | or           | if (value1 == 5 \|\| value2 == 5)                                |
-| if() {}            | if           | if (value > 5) {printf("yes");}                                  |
-| if() {} else {}    | if else      | if (value > 5) {printf("yes");} else {printf("no");}             |
-| if() {} else if {} | if else if   | if (v > 5) {printf("Y");} else if (v <= 5) {printf("N");}        |
-| switch() {case}    | switch-case  | switch (c) {case 1: printf(1); break; default:printf(0); break;} |
-| break              | stop loop    | break;                                                           |
-| continue           | skip iterate | continue;                                                        |
+| Functions          | Description      | Example                                              |
+| ------------------ | ---------------- | ---------------------------------------------------- |
+| !                  | not              | !x                                                   |
+| &&                 | and              | if (x == 5 && y == 5)                                |
+| \|\|               | or               | if (x == 5 \|\| y == 5)                              |
+| if() {}            | if               | if (x > 5) {y=1;}                                    |
+| if() {} else {}    | if else          | if (x > 5) {y=1;} else {y=0;}                        |
+| if() {} else if {} | if else if       | if (x > 5) {y=1;} else if (v <= 5) {y=0;}            |
+| switch() {case}    | switch-case      | switch (x) {case 1: y=1; break; default:y=2; break;} |
+| (?:)               | Ternary Operator | x = (x < 0.5) ? 0 : 1;                               |
+| break              | stop loop        | break;                                               |
+| continue           | skip iteration   | continue;                                            |
+
+Boolean contex
+
+```
+int done = 0;
+if(!done) {} // if(done == 0)
+if(done) {}  // if(done != 0)
+```
 
 ### Iteration
 
-| Functions     | Description   | Example                                                     |
-| ------------- | ------------- | ----------------------------------------------------------- |
-| for() {}      | for loop      | int i = 1; for(int i = 0; i < 10; i++) {printf("Looped!");} |
-| while() {}    | while loop    | int i = 1; while (i <= 10) {printf("Looped!"); i++;}        |
-| do {} while() | do while loop | int i = 1; do {printf("Looped!"); i++;} while (i <= 10)     |
+| Functions     | Description   | Example                                              |
+| ------------- | ------------- | ---------------------------------------------------- |
+| for() {}      | for loop      | int i = 1; for(i = 0; i < 10; i++) {printf("Loop");} |
+| while() {}    | while loop    | int i = 1; while (i < 10) {printf("Loop"); i++;}     |
+| do {} while() | do while loop | int i = 1; do {printf("Loop"); i++;} while (i < 10); |
+
+Loop 2 variables
+
+```
+int x, y;
+for (x = 0, y = 0; x < 10; x++, y--) {
+ printf("%d", x+y);
+}
+```
 
 ### Functions
 
