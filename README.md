@@ -1,6 +1,6 @@
 # C-Tutorial
 
-C programming language summary with sample codes.
+C programming language summary with sample codes and projects.
 
 ## Overview
 
