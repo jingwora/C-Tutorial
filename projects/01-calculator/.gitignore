@@ -27,6 +27,10 @@
 *.filters
 *.user
 
+# Hide folders
+.*
+!/.gitignore
+
 # Executables
 *.exe
 *.out
