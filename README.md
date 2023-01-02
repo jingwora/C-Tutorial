@@ -12,7 +12,7 @@ C programming language summary with sample codes and projects.
 - C is amoung the most popular programming languages.
   TIOBE Index for December 2022
 
-- 1. Python | 2. C | 3. C++ | 4. Java | 5. C#
+1. Python | 2. C | 3. C++ | 4. Java | 5. C#
 
 - It has largely been superseded in that domain by higher-level languages, such as C++, Objective-C, C#, and Java.
 
