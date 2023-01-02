@@ -768,6 +768,9 @@ printf("%d", Function());
 | #else     | The alternative for #if                   |
 | #elif     | #else and #if in one statement            |
 | #endif    | Ends pre-processor conditional            |
+| #line     | Set line number                           |
+| #error    | Abort compilation                         |
+| #pragma   | Set compiler option                       |
 
 ### Error Handling
 
