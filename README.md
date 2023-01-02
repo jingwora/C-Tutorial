@@ -772,6 +772,24 @@ printf("%d", Function());
 | #error    | Abort compilation                         |
 | #pragma   | Set compiler option                       |
 
+```
+#include <stdio.h>
+#include "myfile.h"
+#include "..\myfile.h"
+```
+
+Standard macros
+
+| Directive    | Description                            |
+| ------------ | -------------------------------------- |
+| \_\_FILE\_\_ | The name and path of the current file. |
+| \_\_FILE\_\_ | The name and path of the current file. |
+| \_\_FILE\_\_ | The name and path of the current file. |
+| \_\_FILE\_\_ | The name and path of the current file. |
+| \_\_FILE\_\_ | The name and path of the current file. |
+| \_\_FILE\_\_ | The name and path of the current file. |
+| \_\_FILE\_\_ | The name and path of the current file. |
+
 ### Error Handling
 
 - errno is a global variable that holds the last returned error code.
@@ -863,7 +881,3 @@ VS Code
 - Ultimate Step-By-Step Guide To Learning C Programming Fast (Robert Anderson), 2017
 
 - https://www.w3schools.com/
-
-```
-
-```
