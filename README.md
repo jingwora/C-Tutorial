@@ -244,6 +244,8 @@ String functions
 
 ```
 // Implicit type conversion
+long l = 5; // int to long
+
 int Integer = 1;
 float Float = 1.1;
 char Character = 'A';
@@ -251,6 +253,7 @@ float resultFloat = Integer + Float;  // float
 int resultInt = Float + Character;    // ASCII value of 'A' is 65
 
 // Explicit type conversion using a cast
+int i = (int)10.5; // float to int
 int resultInt2 = (int)Float + Character; // int
 
 // Use a function to convert the type
@@ -488,23 +491,39 @@ printf("pointer location: %p\n", pointer);
 
 ### Storage Classifications
 
-1. Automatic variables
+- Every variable has a storage class that determines its scope and lifetime.
+
+1. Automatic variables (auto)
 
 - Automatically created and destroyed when a function is called
 - auto int value; Is the same as int value;
 
-2. Static variables
+```
+auto int myVar;
+```
+
+2. Static variables (static)
 
 - static is used when you want to keep the variable throughout program session.
-- static int count = 0;
 
-3. Register variables
+```
+static int myVar;
+static void myFunc(void) {}
+```
+
+3. Register variables (register)
 
 - stored in register memory is much much quicker to access
 - only space for a few variables.
-- register int value;
+- Use of the register keyword has become deprecated since modern
+  compilers are automatically able to optimize which variables should be
+  stored in registers.
 
-4. External variables
+```
+register int myVar;
+```
+
+4. External variables (extern)
 
 - global scope variable
 - You would include another file as reference by placing this at the top of your file: #include "FileName.c"
@@ -531,6 +550,17 @@ main.c
 printf("x = %d\n", x);
 ```
 
+5. Volatile variable (volatile)
+
+- Value may be changed by something external to the program.
+- The value must therefore be reread from memory every time it is accessed.
+- Global variables should be declared volatile if their value is shared and can be changed externally.
+- Used with memorymapped peripheral devices
+
+```
+volatile int myMar;
+``
+
 --
 
 - To add a directory to the include path ?
@@ -543,15 +573,16 @@ printf("x = %d\n", x);
 - Allows storing of several types, even other structures.
 
 ```
+
 // Create structure
 struct Student {
-	char name[30]; // String
-	char class;    // Character
-	int age;       // Integer
+char name[30]; // String
+char class; // Character
+int age; // Integer
 };
 
 // Student 1
-struct Student s1;                 // Access structure
+struct Student s1; // Access structure
 strcpy(s1.name, "Kento Yamazaki"); // Assign values to members
 s1.class = 'A';
 s1.age = 20;
@@ -560,7 +591,7 @@ s1.age = 20;
 struct Student s2 = { "Takuya Kimura", 'B', 18 };
 
 // Print
-printf("Name: %s\n", s1.name);   // Access members of a structure
+printf("Name: %s\n", s1.name); // Access members of a structure
 
 ```
 
@@ -571,12 +602,14 @@ printf("Name: %s\n", s1.name);   // Access members of a structure
 - The length must be less than or equal to the bit length of the specified type
 
 ```
+
 struct my_bits
 {
- unsigned short f1 : 1;
- unsigned short f2 : 1;
- unsigned short id : 10;
+unsigned short f1 : 1;
+unsigned short f2 : 1;
+unsigned short id : 10;
 } a;
+
 ```
 
 ### TypeDef
@@ -585,11 +618,13 @@ struct my_bits
 - By convention, uppercase letters are commonly used for these definitions.
 
 ```
+
 typedef struct {
-	char brand[15];
-	char model[15];
-	int year;
+char brand[15];
+char model[15];
+int year;
 } car;
+
 ```
 
 ### Enumeration
@@ -600,13 +635,14 @@ typedef struct {
 - Use enums when you have values that you know aren't going to change, like month days, days, colors, deck of cards, etc.
 
 ```
+
 enum Level {
-  LOW,    // 0
-  MEDIUM, // 1
-  HIGH    // 2
+LOW, // 0
+MEDIUM, // 1
+HIGH // 2
 };
 
-enum Level myVar;  // Access the enum
+enum Level myVar; // Access the enum
 
 enum Level myVar = MEDIUM; // Assigned value
 
@@ -620,15 +656,16 @@ enum Level myVar = MEDIUM; // Assigned value
 - Drawback: changing one field will overwrite the value of the others.
 
 ```
+
 // Define the union
 union Data {
-	int i;     // 4 bytes
-	float f;   // 4 bytes
-	char c[4]; // 4 bytes
+int i; // 4 bytes
+float f; // 4 bytes
+char c[4]; // 4 bytes
 };
 
-union Data data;  // Access the union
-data.i = 10;      // Assign values to members
+union Data data; // Access the union
+data.i = 10; // Assign values to members
 
 printf("Integer: %d\n", data.i); // Access members of a union
 
@@ -691,32 +728,38 @@ fopen_s() mode
 header.h
 
 ```
+
 int x = 10;
 
 int Function() {
 return x;
 }
+
 ```
 
 main.c
 
 ```
+
 #include <stdio.h>
 #include "header.h"
 
 int main() {
 printf("%d", Function());
 }
+
 ```
 
-### Pre-Processor Directives
+### Preprocessor Directives
 
+- A text substitution tool that modifies the source code before it is compiled.
 - Set global values (constant) : #define LOOP_NUMBER 2 (No semicolon!)
 - #undef is normally used to overwrite #define
 - #ifdef and #if #ifdef and #ifndef : most common use for checking if -DDEBUG mode
 
 | Directive | Description                               |
 | --------- | ----------------------------------------- |
+| #include  | File include                              |
 | #define   | Define a macro                            |
 | #undef    | Remove #define                            |
 | #ifdef    | Returns true if this macro is defined     |
@@ -738,35 +781,38 @@ printf("%d", Function());
 | stderr     | Output an error to the console.                     |
 
 ```
+
 void function1()
 {
-	FILE* file;
-	int errnum;
+FILE\* file;
+int errnum;
 
-	//Looks for file
-	file = fopen("NoFile.txt", "rb");
+    //Looks for file
+    file = fopen("NoFile.txt", "rb");
 
-	//If the file returned an error
-	if (file == NULL) {
-	    //Grabs error code
-		errnum = errno;
-		//Prints error code
-		fprintf(stderr, "1: Value of errno:% d\n", errno);  // 2
+    //If the file returned an error
+    if (file == NULL) {
+        //Grabs error code
+    	errnum = errno;
+    	//Prints error code
+    	fprintf(stderr, "1: Value of errno:% d\n", errno);  // 2
 
-		//Returns string provided + : and Error code message
-		perror("1: Error printed by perror");   // No such file or directory
+    	//Returns string provided + : and Error code message
+    	perror("1: Error printed by perror");   // No such file or directory
 
-		//Grabs the error text
-		char* errorMsg[] = {
-			strerror()
-		};
+    	//Grabs the error text
+    	char* errorMsg[] = {
+    		strerror()
+    	};
 
-		printf("1: Error msg test print: %s\n", *errorMsg); } // Error msg test print: Unknown error
+    	printf("1: Error msg test print: %s\n", *errorMsg); } // Error msg test print: Unknown error
 
-	else {
-		fclose(file);
-	}
+    else {
+    	fclose(file);
+    }
+
 }
+
 ```
 
 ### Memory management
@@ -814,3 +860,4 @@ VS Code
 - Ultimate Step-By-Step Guide To Learning C Programming Fast (Robert Anderson), 2017
 
 - https://www.w3schools.com/
+```
