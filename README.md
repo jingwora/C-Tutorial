@@ -721,6 +721,7 @@ fopen_s() mode
 
 - A header file is a list of function, variable and macro definitions that can be
   included and used in different files.
+- The interface is placed in a header file
 - .h filename extensions
 - To make modules that can be reused between projects.
 - #include"“header.h"
@@ -753,8 +754,6 @@ printf("%d", Function());
 ### Preprocessor Directives
 
 - A text substitution tool that modifies the source code before it is compiled.
-- Set global values (constant) : #define LOOP_NUMBER 2 (No semicolon!)
-- #undef is normally used to overwrite #define
 - #ifdef and #if #ifdef and #ifndef : most common use for checking if -DDEBUG mode
 
 | Directive | Description                               |
@@ -776,19 +775,43 @@ printf("%d", Function());
 #include <stdio.h>
 #include "myfile.h"
 #include "..\myfile.h"
+
+#define LOOP_NUMBER 2            // set Global value
+
+#define DEBUG 1                  // define debug mode
+
+#ifdef DEBUG                     // check if in debug mode
+puts("DEBUG!");
+#endif
+
+#define _CRT_SECURE_NO_DEPRECATE // to use deprecated functions
+
+#define SQUARE(x) ((x)*(x))      // Macro Functions
+
+#error "Compilation aborted"
+
+#line 5 "myapp.c"                // to reset the line number and filename in the code
+
+#pragma message "Compiling " __FILE__ "..." // output a string to the build window
+
 ```
 
 Standard macros
 
-| Directive    | Description                            |
-| ------------ | -------------------------------------- |
-| \_\_FILE\_\_ | The name and path of the current file. |
-| \_\_FILE\_\_ | The name and path of the current file. |
-| \_\_FILE\_\_ | The name and path of the current file. |
-| \_\_FILE\_\_ | The name and path of the current file. |
-| \_\_FILE\_\_ | The name and path of the current file. |
-| \_\_FILE\_\_ | The name and path of the current file. |
-| \_\_FILE\_\_ | The name and path of the current file. |
+- A common use for predefined macros is to provide debugging information.
+
+| Directive    | Description                                                     |
+| ------------ | --------------------------------------------------------------- |
+| \_\_FILE\_\_ | The name and path of the current file.                          |
+| \_\_LINE\_\_ | The current line number                                         |
+| \_\_DATE\_\_ | The compilation date in MM DD YYYY format.                      |
+| \_\_TIME\_\_ | The compilation time in HH:MM:SS format..                       |
+| \_\_func\_\_ | The name of the current function. Added in C99.                 |
+| \_\_STDC\_\_ | Defined as 1 if the compiler complies with the ANSI C standard. |
+
+```
+printf("Error in %s at line %d", __FILE__, __LINE__);
+```
 
 ### Error Handling
 
@@ -838,15 +861,15 @@ int errnum;
 
 ### Memory management
 
+- Managing dynamically allocated memory
 - #include <stdlib.h>
 
-| Function                                  | Description                                   |
-| ----------------------------------------- | --------------------------------------------- |
-| void \*calloc(int num, int size);         | allocates an array and the size               |
-| void free(void \*address);                | releases memory                               |
-| void \*malloc(int num);                   | calloc but leaves the locations uninitialized |
-| void \*malloc(int num);                   | calloc but leaves the locations uninitialized |
-| void *realloc(void *address, int newsize) | re-allocates memory to specified in newsize   |
+| Function | Description                                   | Example                                   |
+| -------- | --------------------------------------------- | ----------------------------------------- |
+| calloc   | allocates an array and the size               | void \*calloc(int num, int size);         |
+| malloc   | calloc but leaves the locations uninitialized | void \*malloc(int num);                   |
+| realloc  | re-allocates memory to specified in newsize   | void *realloc(void *address, int newsize) |
+| free     | releases memory                               | void free(void \*address);                |
 
 ## Library
 
