@@ -79,7 +79,7 @@ Run
 
 - https://www.codechef.com/ide
 
-### VSCODE
+### VS Code
 
 Installation
 
@@ -91,9 +91,9 @@ Complier Setting
 - Setup path
 - Setup cmd
 
-VSCODE Setting
+VS Code Setting
 
-- Install VSCODE
+- Install VS Code
 - Install C/C++ Extension
 - Install Code Runner Extension
 - File > Preference > Setting > Extension > Run code configuration > Check Run In Terminal
@@ -327,8 +327,6 @@ Format Specifier
 | if() {} else if {} | if else if       | if (x > 5) {y=1;} else if (v <= 5) {y=0;}            |
 | switch() {case}    | switch-case      | switch (x) {case 1: y=1; break; default:y=2; break;} |
 | (?:)               | Ternary Operator | x = (x < 0.5) ? 0 : 1;                               |
-| break              | stop loop        | break;                                               |
-| continue           | skip iteration   | continue;                                            |
 
 Boolean contex
 
@@ -340,11 +338,13 @@ if(done) {}  // if(done != 0)
 
 ### Iteration
 
-| Functions     | Description   | Example                                              |
-| ------------- | ------------- | ---------------------------------------------------- |
-| for() {}      | for loop      | int i = 1; for(i = 0; i < 10; i++) {printf("Loop");} |
-| while() {}    | while loop    | int i = 1; while (i < 10) {printf("Loop"); i++;}     |
-| do {} while() | do while loop | int i = 1; do {printf("Loop"); i++;} while (i < 10); |
+| Functions     | Description    | Example                                              |
+| ------------- | -------------- | ---------------------------------------------------- |
+| for() {}      | for loop       | int i = 1; for(i = 0; i < 10; i++) {printf("Loop");} |
+| while() {}    | while loop     | int i = 1; while (i < 10) {printf("Loop"); i++;}     |
+| do {} while() | do while loop  | int i = 1; do {printf("Loop"); i++;} while (i < 10); |
+| break         | end loop       | if (i == 5) break;                                   |
+| continue      | skip iteration | if (i == 5) continue; // start next iteration        |
 
 Loop 2 variables
 
@@ -357,18 +357,30 @@ for (x = 0, y = 0; x < 10; x++, y--) {
 
 ### Functions
 
-- A function is a block of code which only runs when it is called.
+- Functions are reusable code blocks that will only execute when called.
 - A method has two elements, parameters:(passed values) and the return type (returned values).
 - Void is used when you are not required to return.
 - Void main() cannot use exit() method so it is good practice to use int main() over the void main().
-- There are two types of parameter passing, by reference and by value.
-- Reference: any changes to parameter effects that passed variable. (Need pointers)
-- Value: any changes to parameter do not effect that passed variable.
+- void myFunction() {} : Accepts an unknown number of arguments
 
-| Functions | Description             | Example                                    |
-| --------- | ----------------------- | ------------------------------------------ |
-| void() {} | function without return | void function(int value) {printf(value); } |
-| int() {}  | function with return    | int function(int value) return value\*2; } |
+Two types of parameter passing:
+
+1. Passing by reference: any changes to parameter effects that passed variable. (Need pointers)
+2. Passing by value: any changes to parameter do not effect that passed variable.
+
+| Functions     | Description          | Example                                         |
+| ------------- | -------------------- | ----------------------------------------------- |
+| int() {}      | function with return | int myFunction(int value) return value\*2; }    |
+| void() {}     | function no return   | void myFunction(int value) {printf(value); }    |
+| void(void) {} | function no argument | void myFunction(void) {printf("Hello World"); } |
+
+Call function
+
+```
+myFunction()           // no argument
+myFunction(value)      // with argument
+return = myFunction()  // assign return
+```
 
 Good practice of function
 
@@ -722,7 +734,16 @@ void function1()
 
 - #define \_CRT_SECURE_NO_DEPRECATE // to use deprecated functions
 
-### References:
+## Tools
+
+VS Code
+
+- Code Graph
+- https://marketplace.visualstudio.com/items?itemName=YaobinOuyang.CodeAtlas
+
+![](https://github.com/league1991/CodeAtlasVsix/raw/master/githubCache/main.png)
+
+## References:
 
 - Modern C Quick Syntax Reference A Pocket Guide to the Language, APIs, and Library (Mikael Olsson), 2019
 
