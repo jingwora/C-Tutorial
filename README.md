@@ -559,7 +559,7 @@ printf("x = %d\n", x);
 
 ```
 volatile int myMar;
-``
+```
 
 --
 
@@ -863,4 +863,7 @@ VS Code
 - Ultimate Step-By-Step Guide To Learning C Programming Fast (Robert Anderson), 2017
 
 - https://www.w3schools.com/
+
+```
+
 ```
