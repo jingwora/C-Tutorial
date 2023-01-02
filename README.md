@@ -401,6 +401,43 @@ int myFunction(int x, int y) {
 }
 ```
 
+### Variable argument lists
+
+- Function that can accept a variable number of arguments
+- va_list : create variable argument list
+- va_start : start
+- va_end : end and cleans up the memory
+
+```
+int myFunction(int n, ...)
+{
+    int largest = 0;
+    va_list valist;
+    va_start(valist, n);
+
+    for (int i = 0; i < n; i++)
+    {
+        //Grabs the next arg
+        int nextVar = va_arg(valist, int);
+
+        if (nextVar > largest || i == 0)
+        {
+            largest = nextVar;
+        }
+    }
+    va_end(valist);
+
+    return largest;
+}
+
+int main()
+{
+    printf("Max: %d\n", myFunction(6, -2, 3, 4, 5, 66, 10));
+
+    return 0;
+}
+```
+
 ### Arrays
 
 - First index has an identifying value of 0
@@ -563,13 +600,6 @@ data.i = 10;      // Assign values to members
 printf("Integer: %d\n", data.i); // Access members of a union
 
 ```
-
-### Variable argument lists
-
-- Function that can accept a variable number of arguments
-- va_list : create variable argument list
-- va_start : start
-- va_end : end and cleans up the memory
 
 ### Math function
 
