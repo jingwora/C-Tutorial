@@ -242,18 +242,20 @@ String functions
 
 - To convert from one type to another
 
-Implicit type conversion :
+```
+// Implicit type conversion
+int Integer = 1;
+float Float = 1.1;
+char Character = 'A';
+float resultFloat = Integer + Float;  // float
+int resultInt = Float + Character;    // ASCII value of 'A' is 65
 
-- float resultFloat = Integer + Float;
-- int resultInt = Float + Character; // ASCII value of 'A' is 65
+// Explicit type conversion using a cast
+int resultInt2 = (int)Float + Character; // int
 
-Explicit type conversion using a cast
-
-- int resultInt2 = (int)Float + Character;
-
-Use a function to convert the type
-
-- double resultDouble = atof("3.14");
+// Use a function to convert the type
+double resultDouble = atof("3.14");  // double
+```
 
 Format Specifier
 
@@ -409,32 +411,38 @@ int myFunction(int x, int y) {
 - va_end : end and cleans up the memory
 
 ```
-int myFunction(int n, ...)
-{
-    int largest = 0;
-    va_list valist;
-    va_start(valist, n);
+int sum(int num, ...) {
+ va_list args;               // variable argument list
+ int sum = 0, i = 0;
+ va_start(args, num);        // initialize argument list
 
-    for (int i = 0; i < n; i++)
-    {
-        //Grabs the next arg
-        int nextVar = va_arg(valist, int);
+ for (i = 0; i < num; i++)   // loop through arguments
+   sum += va_arg(args, int); // get next argument
+ va_end(args);               // free memory
 
-        if (nextVar > largest || i == 0)
-        {
-            largest = nextVar;
-        }
-    }
-    va_end(valist);
-
-    return largest;
+ return sum;
 }
 
-int main()
-{
-    printf("Max: %d\n", myFunction(6, -2, 3, 4, 5, 66, 10));
+int main(void) {
+ printf("Sum of 1+2+3 = %d", sum(3,1,2,3)); // 6
+}
+```
 
-    return 0;
+### Inline Functions
+
+- Function be substituted at the place where its function call is happened.
+- Saving the overhead of a function call.
+- It is most suited for use with small functions
+- C99 standard
+
+```
+static inline int increment(int a) { return ++a; }
+
+int main(void) {
+  int i;
+  for(i = 0; i < 100;) {
+    i = increment(i);
+  }
 }
 ```
 
@@ -468,6 +476,15 @@ int main()
 - Pointer to pointer : int\*\* r = &p;
 - Null Pointer : int\* p = NULL; int\* p = 0;
 - function(int value1, int value2, int(\*opp)(int, int))
+
+```
+int var = 10;   //Regular variable
+printf("Var's value is now: %d\n", var);
+
+int* pointer = NULL;   //Pointer
+pointer = &var;        //Storing of var memory location
+printf("pointer location: %p\n", pointer);
+```
 
 ### Storage Classifications
 
@@ -547,31 +564,46 @@ printf("Name: %s\n", s1.name);   // Access members of a structure
 
 ```
 
+### Bit Fields
+
+- Specify the bit renght of integer fields in struct
+- To optimize memory
+- The length must be less than or equal to the bit length of the specified type
+
+```
+struct my_bits
+{
+ unsigned short f1 : 1;
+ unsigned short f2 : 1;
+ unsigned short id : 10;
+} a;
+```
+
 ### TypeDef
 
 - To customize the name of build in and user defined variables and structures.
+- By convention, uppercase letters are commonly used for these definitions.
 
 ```
 typedef struct {
 	char brand[15];
 	char model[15];
 	int year;
-} Car;
-
+} car;
 ```
 
 ### Enumeration
 
-- A group of constants (unchangeable values)
+- A user-defined type consisting of a fixed list of named constants.
 - By default, the first item has the value 0, the second has the value 1, etc.
 - Print result is 0, 1,..
 - Use enums when you have values that you know aren't going to change, like month days, days, colors, deck of cards, etc.
 
 ```
 enum Level {
-  LOW,
-  MEDIUM,
-  HIGH
+  LOW,    // 0
+  MEDIUM, // 1
+  HIGH    // 2
 };
 
 enum Level myVar;  // Access the enum
@@ -583,15 +615,16 @@ enum Level myVar = MEDIUM; // Assigned value
 ### Unions
 
 - To store different data types in the same memory location
-- This size of the unions is as large as the largest variable (smaller than structure)
-- Drawback: changing one value affects every other variable,
+- This size of the unions is the size of largest variable
+- With same datatype, unions is smaller than structure.
+- Drawback: changing one field will overwrite the value of the others.
 
 ```
 // Define the union
 union Data {
-	int i;
-	float f;
-	char str[20];
+	int i;     // 4 bytes
+	float f;   // 4 bytes
+	char c[4]; // 4 bytes
 };
 
 union Data data;  // Access the union
