@@ -738,10 +738,11 @@ void function1()
 
 VS Code
 
-- Code Graph
-- https://marketplace.visualstudio.com/items?itemName=YaobinOuyang.CodeAtlas
+- Code Graph Extension
+- Download: https://marketplace.visualstudio.com/items?itemName=YaobinOuyang.CodeAtlas
+- Github: https://github.com/league1991/CodeAtlasVsix
 
-![](https://github.com/league1991/CodeAtlasVsix/raw/master/githubCache/main.png)
+  ![](https://github.com/league1991/CodeAtlasVsix/raw/master/githubCache/main.png)
 
 ## References:
 
