@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{192b3324-c163-4c12-b1a5-19a5b30c4f22}</ProjectGuid>
+    <ProjectGuid>{5132970f-f7e8-421d-8e16-577f4d2b1d6e}</ProjectGuid>
     <RootNamespace>My01calculator</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
