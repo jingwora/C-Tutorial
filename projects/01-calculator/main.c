@@ -21,7 +21,10 @@ int main(int argc, char* argv[])
 	float answer;
 
 	// ask for input
-	printf("Enter calculation \nExample: 1+1 enter \n[operator: + - * / ^] \n:");
+	printf("\n\n=========================\n");
+	printf("CALCULATOR\n");
+	printf("=========================\n");
+	printf("Please enter calculation \n(example: 1+1 enter) \n[operator: + - * / ^] \n:");
 	scanf("%f %c %f,", &valueOne, &operator, &valueTwo);
 
 	// caluculation
@@ -43,7 +46,7 @@ int main(int argc, char* argv[])
 	}
 
 	// print output
-	printf("%.9g%c%.9g = %.6g\n\n", valueOne, operator, valueTwo, answer);
+	printf("\n%.9g%c%.9g = %.6g\n\n", valueOne, operator, valueTwo, answer);
 
 	goto exit;
 
