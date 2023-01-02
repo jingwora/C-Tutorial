@@ -226,13 +226,14 @@ String functions
 
 ### Print functions
 
-| Functions | Description          | Example                                  |
-| --------- | -------------------- | ---------------------------------------- |
-| printf()  | print value          | printf("Hello, world!");                 |
-| printf()  | print integer        | printf("Integer: %d\n", integer);        |
-| puts()    | print string         | puts("Hello, world!");                   |
-| scanf_s() | input single word    | int num; scanf_s(" %d", &num);           |
-| fgets()   | input multiple words | char s[100]; fgets(s, sizeof(s), stdin); |
+| Functions  | Description           | Example                                      |
+| ---------- | --------------------- | -------------------------------------------- |
+| printf()   | print value           | printf("Hello, world!");                     |
+| printf()   | print integer         | printf("Integer: %d\n", integer);            |
+| snprintf() | print integer as char | snprintf(output, sizeof(output), "%d", num); |
+| puts()     | print string          | puts("Hello, world!");                       |
+| scanf_s()  | input single word     | int num; scanf_s(" %d", &num);               |
+| fgets()    | input multiple words  | char s[100]; fgets(s, sizeof(s), stdin);     |
 
 - Declare Multiple Variables
 - int x = 1, y = 2, z = 3;
@@ -259,6 +260,18 @@ int resultInt2 = (int)Float + Character; // int
 // Use a function to convert the type
 double resultDouble = atof("3.14");  // double
 ```
+
+Built-in datatype conversion function
+
+- #include <stdlib.h>
+
+- No error-handling capabilities are provided by atoi, use of this function is discouraged.
+
+  | Symbol | Description     | Example |
+  | ------ | --------------- | ------- |
+  | atoi   | parses to int   | int     |
+  | atof   | parses to float | int     |
+  | atol   | parses to long  | int     |
 
 Format Specifier
 
@@ -749,6 +762,21 @@ int main() {
 printf("%d", Function());
 }
 
+```
+
+### Include Guards
+
+- Enclosing the body of the header in a #ifndef section that checks for a
+  macro specific to that header file.
+- The macro is then defined, which effectively prevents the
+  file from being included again.
+
+```
+// app.h
+#ifndef APP_H
+#define APP_H
+
+#endif
 ```
 
 ### Preprocessor Directives
