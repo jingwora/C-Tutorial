@@ -1,5 +1,5 @@
 /*
-C-Tutorail in visual studio
+C Tutorail in visual studio
 Condition1
 [if, else if, else]
 */
@@ -14,13 +14,12 @@ int condition4();
 int main()
 {
 	condition1();
-	//condition2();
-	//condition3();
-	//condition4();	
+	// condition2();
+	// condition3();
+	// condition4();
 
 	return 0;
 }
-
 
 int value = 5;
 
@@ -35,7 +34,6 @@ int condition1()
 
 	return 0;
 }
-
 
 // condition2
 // f() {} else {}
@@ -53,7 +51,6 @@ int condition2()
 	return 0;
 }
 
-
 // condition3
 // if() {} else if() {}
 int condition3()
@@ -69,7 +66,6 @@ int condition3()
 
 	return 0;
 }
-
 
 // condition4
 // if else boolean

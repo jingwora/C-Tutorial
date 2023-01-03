@@ -1,4 +1,4 @@
-# C-Tutorial
+# C Tutorial
 
 C programming language summary with sample codes and projects.
 

@@ -1,5 +1,5 @@
 /*
-C-Tutorail in visual studio
+C Tutorail in visual studio
 Header files
 header.h, #define, #ifdef, #ifndef, #if, #elif, #else
 */
@@ -7,10 +7,11 @@ header.h, #define, #ifdef, #ifndef, #if, #elif, #else
 #include <stdio.h>
 #include "header.h"
 #define LOOP_NUMBER 2 // global values - constant
-#define DEBUG 1       // define debug mode
+#define DEBUG 1		  // define debug mode
 #pragma message "Compiling " __FILE__ "..."
 
-int main() {
+int main()
+{
 
 	printf("%d \n", function1());
 
@@ -21,31 +22,31 @@ int main() {
 		printf("%d \n", i);
 	}
 
-    #ifdef DEBUG   // check if in debug mode
-	puts("DEBUG!"); 
-    #endif
+#ifdef DEBUG // check if in debug mode
+	puts("DEBUG!");
+#endif
 
-    #ifndef DEBUG   // check if not in debug mode
+#ifndef DEBUG // check if not in debug mode
 	puts("NOT IN DEBUG!");
-    #endif
+#endif
 
-    #if DEBUG
+#if DEBUG
 	printf("Debug mode is on\n");
-    #endif
+#endif
 
-    #if !DEBUG
+#if !DEBUG
 	printf("Debug mode is off\n");
-    #endif
+#endif
 
-    #if DEBUG > 0
+#if DEBUG > 0
 	printf("Debug level is high\n");
-    
-    #elif DEBUG == 0
+
+#elif DEBUG == 0
 	printf("Debug level is low\n");
 
-    #else
+#else
 	printf("Debug level is unknown\n");
-    #endif
+#endif
 
 	return 0;
 }

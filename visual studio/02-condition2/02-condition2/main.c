@@ -1,18 +1,16 @@
 /*
-C-Tutorail in visual studio
+C Tutorail in visual studio
 Condition2
 [if, else if, else], [switch, case, default, break]
 */
 
-#include <stdio.h> 
-
+#include <stdio.h>
 
 int condition1();
 int condition2();
 int condition3();
 int condition4();
 int condition5();
-
 
 int main()
 {
@@ -24,7 +22,6 @@ int main()
 
 	return 0;
 }
-
 
 // condition1
 // more or less
@@ -41,13 +38,13 @@ int condition1()
 	{
 		printf("1:Value 1 is bigger!");
 	}
-	else {
+	else
+	{
 		printf("1:Value 2 is bigger!");
 	}
 
 	return 0;
 }
-
 
 // condition2
 // and
@@ -68,7 +65,6 @@ int condition2()
 	return 0;
 }
 
-
 // condition3
 // or
 int condition3()
@@ -86,7 +82,6 @@ int condition3()
 
 	return 0;
 }
-
 
 // condition4
 // switch

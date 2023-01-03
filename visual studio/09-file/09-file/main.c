@@ -1,7 +1,7 @@
 /*
-C-Tutorail in visual studio
+C Tutorail in visual studio
 File
-FILE, fopen, fopen_s, fprintf, fclose, 
+FILE, fopen, fopen_s, fprintf, fclose,
 */
 
 #define _CRT_SECURE_NO_DEPRECATE // to use deprecated functions
@@ -23,12 +23,11 @@ int main()
 	return 0;
 }
 
-
 // function1
 // FILE, fopen_s, fprintf, fclose
 void function1()
 {
-	FILE* ptr;
+	FILE *ptr;
 
 	// Open the file "output.txt" for writing
 	errno_t result = fopen_s(&ptr, "output1.txt", "w");
@@ -44,9 +43,7 @@ void function1()
 
 	// Print file
 	printf("save output1.txt\n");
-
 }
-
 
 // function2
 // fopen_s write to file
@@ -60,32 +57,31 @@ void function2()
 	// Add value
 	int value = add(10, 25);
 
-	FILE* ptr;
+	FILE *ptr;
 
 	// Open the file "output.txt" for writing
 	errno_t result = fopen_s(&ptr, "output2.txt", "w");
 
 	// Write value to the file
 	fprintf(ptr, " %d\n", value);
-	
+
 	// Close the file
 	fclose(ptr);
 
 	// Print file
 	printf("save output2.txt\n");
-
 }
-
 
 // function3
 // fopen read, add text, write
 void function3()
 {
 	// Open a file for reading and writing
-	FILE* file = fopen("output1.txt", "r+");
+	FILE *file = fopen("output1.txt", "r+");
 
 	// Check if the file was opened successfully
-	if (file == NULL) {
+	if (file == NULL)
+	{
 		// Handle error
 		perror("Error opening file");
 		return 1;
@@ -106,26 +102,27 @@ void function3()
 	return 0;
 }
 
-
 // function4
-// 
-void function4() 
+//
+void function4()
 {
 	// Open a file for reading
-	FILE* infile = fopen("output1.txt", "r");
+	FILE *infile = fopen("output1.txt", "r");
 
 	// Check if the input file was opened successfully
-	if (infile == NULL) {
+	if (infile == NULL)
+	{
 		// Handle error
 		perror("Error opening input file");
 		return 1;
 	}
 
 	// Open a file for writing
-	FILE* outfile = fopen("output3.txt", "w");
+	FILE *outfile = fopen("output3.txt", "w");
 
 	// Check if the output file was opened successfully
-	if (outfile == NULL) {
+	if (outfile == NULL)
+	{
 		// Handle error
 		perror("Error opening output file");
 		return 1;
@@ -133,7 +130,8 @@ void function4()
 
 	// Read the contents of the input file, one character at a time
 	int c;
-	while ((c = fgetc(infile)) != EOF) {
+	while ((c = fgetc(infile)) != EOF)
+	{
 		// Write the character to the output file
 		fputc(c, outfile);
 	}

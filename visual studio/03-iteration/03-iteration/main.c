@@ -1,11 +1,10 @@
 /*
-C-Tutorail in visual studio
+C Tutorail in visual studio
 Iteration
 for, while, do while, break, continue
 */
 
 #include <stdio.h>
-
 
 int iteration1();
 int iteration2();
@@ -15,7 +14,6 @@ int iteration5();
 int iteration6();
 int iteration7();
 int iteration8();
-
 
 int main()
 {
@@ -31,7 +29,6 @@ int main()
 	return 0;
 }
 
-
 // iteration1
 // for loop
 int iteration1()
@@ -45,7 +42,6 @@ int iteration1()
 
 	return 0;
 }
-
 
 // iteration2
 // while loop
@@ -62,7 +58,6 @@ int iteration2()
 	return 0;
 }
 
-
 // iteration3
 // Do-While
 int iteration3()
@@ -77,7 +72,6 @@ int iteration3()
 
 	return 0;
 }
-
 
 // iteration4
 // Do-While
@@ -107,7 +101,6 @@ int iteration4()
 	return 0;
 }
 
-
 // iteration5
 // for if break
 int iteration5()
@@ -124,7 +117,6 @@ int iteration5()
 	return 0;
 }
 
-
 // iteration6
 // for if continue
 int iteration6()
@@ -140,7 +132,6 @@ int iteration6()
 
 	return 0;
 }
-
 
 // iteration7
 // nested loop
@@ -160,7 +151,6 @@ int iteration7()
 
 	return 0;
 }
-
 
 // iteration8
 // nested loop

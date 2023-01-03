@@ -1,9 +1,8 @@
 /*
-C-Tutorial projects
+C Tutorial projects
 Project: Calculator
 Source: https://github.com/BradStevenson/Simple-C-Calculator
 */
-
 
 #define _CRT_SECURE_NO_DEPRECATE
 #include <stdio.h>
@@ -11,8 +10,7 @@ Source: https://github.com/BradStevenson/Simple-C-Calculator
 #include <string.h>
 #include <math.h>
 
-
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	// create variable
 	float valueOne;
@@ -25,24 +23,31 @@ int main(int argc, char* argv[])
 	printf("CALCULATOR\n");
 	printf("=========================\n");
 	printf("Please enter calculation \n(example: 1+1 enter) \n[operator: + - * / ^] \n:");
-	scanf("%f %c %f,", &valueOne, &operator, &valueTwo);
+	scanf("%f %c %f,", &valueOne, &operator, & valueTwo);
 
 	// caluculation
 	switch (operator)
 	{
-	case '/': answer = valueOne / valueTwo;
+	case '/':
+		answer = valueOne / valueTwo;
 		break;
-	case '*': answer = valueOne * valueTwo;
+	case '*':
+		answer = valueOne * valueTwo;
 		break;
-	case '+': answer = valueOne + valueTwo;
+	case '+':
+		answer = valueOne + valueTwo;
 		break;
-	case '-': answer = valueOne - valueTwo;
+	case '-':
+		answer = valueOne - valueTwo;
 		break;
-	case '^': answer = pow(valueOne, valueTwo);
+	case '^':
+		answer = pow(valueOne, valueTwo);
 		break;
-	case ' ': answer = sqrt(valueTwo);
+	case ' ':
+		answer = sqrt(valueTwo);
 		break;
-	default: goto fail;
+	default:
+		goto fail;
 	}
 
 	// print output

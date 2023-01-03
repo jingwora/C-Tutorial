@@ -1,12 +1,11 @@
 /*
-C-Tutorail in visual studio
+C Tutorail in visual studio
 Variables
 printf, scanf_s, sizeof, strlen, strcpy_c, strcat_s, strcmp
-(int), 
+(int),
 */
 
 #include <stdio.h>
-
 
 int function1();
 int function2();
@@ -21,20 +20,19 @@ int function10();
 
 int main()
 {
-	//function1();
-	//function2();
-	//function3();
-	//function4();
-	//function5();
-	//function6();
-	//function7();
-	//function8();
-	//function9();
+	// function1();
+	// function2();
+	// function3();
+	// function4();
+	// function5();
+	// function6();
+	// function7();
+	// function8();
+	// function9();
 	function10();
 
 	return 0;
 }
-
 
 // function1
 // printf
@@ -55,7 +53,6 @@ int function1()
 	return 0;
 }
 
-
 // function2
 // puts
 int function2()
@@ -69,7 +66,6 @@ int function2()
 	return 0;
 }
 
-
 // function3
 // scanf_s
 int function3()
@@ -82,10 +78,10 @@ int function3()
 	return 0;
 }
 
-
 // function4
 // fgets
-int function4() {
+int function4()
+{
 	char sentence[100];
 
 	printf("Enter a line of text: ");
@@ -97,7 +93,6 @@ int function4() {
 
 	return 0;
 }
-
 
 // function5
 // sizeof
@@ -116,7 +111,6 @@ int function5()
 	return 0;
 }
 
-
 // function6
 // strlen
 #include <string.h>
@@ -126,14 +120,13 @@ int function6()
 	char alphabet1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char alphabet2[50] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-	printf("strlen: %d \n", strlen(alphabet1));   // 26
-	printf("sizeof: %d \n", sizeof(alphabet1));   // 27
-	printf("strlen: %d \n", strlen(alphabet2));   // 26
-	printf("sizeof: %d \n", sizeof(alphabet2));   // 50
+	printf("strlen: %d \n", strlen(alphabet1)); // 26
+	printf("sizeof: %d \n", sizeof(alphabet1)); // 27
+	printf("strlen: %d \n", strlen(alphabet2)); // 26
+	printf("sizeof: %d \n", sizeof(alphabet2)); // 50
 
 	return 0;
 }
-
 
 // function7
 // strcpy_c
@@ -146,7 +139,8 @@ int function7()
 	// Copy str1 to str2 using strcpy_s
 	errno_t result = strcpy_s(str2, sizeof(str2), str1);
 
-	if (result != 0) {
+	if (result != 0)
+	{
 		// Handle the error
 		printf("Error copying string: %d\n", result);
 		return 1;
@@ -156,7 +150,6 @@ int function7()
 
 	return 0;
 }
-
 
 // function8
 // strcat_s
@@ -169,7 +162,8 @@ int function8()
 	// Concatenate str2 to str1 using strcat_s
 	errno_t result = strcat_s(str1, sizeof(str1), str2);
 
-	if (result != 0) {
+	if (result != 0)
+	{
 		// Handle the error
 		printf("Error concatenating strings: %d\n", result);
 		return 1;
@@ -178,7 +172,6 @@ int function8()
 	printf("str1: %s\n", str1);
 	return 0;
 }
-
 
 // function9
 // strcmp
@@ -189,10 +182,10 @@ int function9()
 	char str3[] = "Hi";
 
 	// Compare str1 and str2, and print the result
-	printf("%d\n", strcmp(str1, str2));  // Returns 0 (the strings are equal)
+	printf("%d\n", strcmp(str1, str2)); // Returns 0 (the strings are equal)
 
 	// Compare str1 and str3, and print the result
-	printf("%d\n", strcmp(str1, str3));  // Returns -1 (the strings are not equal)
+	printf("%d\n", strcmp(str1, str3)); // Returns -1 (the strings are not equal)
 
 	return 0;
 }
@@ -200,24 +193,24 @@ int function9()
 // function10
 // change type
 
-int function10(void) {
+int function10(void)
+{
 	int Integer = 42;
 	float Float = 3.14;
 	char Character = 'A';
 
 	// Implicit type conversion
-	float resultFloat = Integer + Float;  // resultFloat = 45.14
-	int resultInt1 = Float + Character;   // resultInt1 = 100 (ASCII value of 'A' is 65)
+	float resultFloat = Integer + Float; // resultFloat = 45.14
+	int resultInt1 = Float + Character;	 // resultInt1 = 100 (ASCII value of 'A' is 65)
 
 	// Explicit type conversion using a cast
-	int resultInt2 = (int)Float + Character;  // resultInt2 = 68 (3 + 65)
+	int resultInt2 = (int)Float + Character; // resultInt2 = 68 (3 + 65)
 
 	// Use a function to convert the type
-	double resultDouble = atof("3.14");  // resultDouble = 3.14
+	double resultDouble = atof("3.14"); // resultDouble = 3.14
 
 	printf("10: a = %d, b = %f, c = %c, d = %f, e = %d, f = %d, g = %lf\n",
-		Integer, Float, Character, resultFloat, resultInt1, resultInt2, resultDouble);
+		   Integer, Float, Character, resultFloat, resultInt1, resultInt2, resultDouble);
 
 	return 0;
 }
-
